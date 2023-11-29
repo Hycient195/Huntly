@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function UserProfilePortfolio({ projectList }: { projectList: typeof projects}) {
   return (
-    <section className="border border-slate-300 p-3 lg:p4 xl:p-5 relative">
+    <section className="border border-slate-300 p-3 lg:p4 xl:p-5 relative mb-6">
       <div className="flex flex-row gap-x-2 justify-between items-center">
         <h2 className="text-lg text-slate700 font-semibold">Portfolio</h2>
         <button className="btn-secondary px-1.5 py-1 rounded-sm">

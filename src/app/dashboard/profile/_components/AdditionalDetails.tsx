@@ -25,7 +25,16 @@ export default function AdditionalDetails({ details }: IProps) {
               </span>
               <div className="">
                 <p className="text-slate-500 text-sm">{detail.text}</p>
-                <p className="text-slate-600 text-sm">{detail.detail}</p>
+                {
+                  detail.text === "Email"
+                    ? (
+                      <a href={`mailto:${detail.detail}`} className="text-slate-600 text-sm">{detail.detail}</a>
+                    ) : detail.text === "Phone" ? (
+                      <a href={`tel:${detail.detail}`} className="text-slate-600 text-sm">{detail.detail}</a>
+                    ) : (
+                      <p className="text-slate-600 text-sm">{detail.detail}</p>
+                    )
+                }
               </div>
           </li>
           ))

@@ -25,7 +25,7 @@ export default function SocialLinks({ details }: IProps) {
               </span>
               <div className="">
                 <p className="text-slate-500 text-sm">{detail.text}</p>
-                <a href={detail.url} className="text-primary text-sm">{detail.detail}</a>
+                <a href={detail.url} target="_blank" rel="no-referrer" className="text-primary text-sm">{detail.detail}</a>
               </div>
           </li>
           ))

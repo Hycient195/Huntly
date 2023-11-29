@@ -2,6 +2,7 @@
 
 import { memo, useState } from "react";
 import { education, jobExperiences } from "../data";
+import Image from "next/image";
 
 
 const UserProfileEducation = memo(({ experiences } : { experiences: Array<typeof education[0]> }) => {
@@ -31,8 +32,8 @@ const UserProfileEducation = memo(({ experiences } : { experiences: Array<typeof
         experiences && experiences?.filter((_, index: number) => index < visibleExperiencesCount)?.map((experience: typeof education[0], index: number) => (
           <>
             <li key={index} className="grid grid-cols-[1fr_5fr]">
-              <figure className="overflow-hidden justify-self-center rounded-full w-[clamp(30px,85%,75px)] h-auto aspect-square bg-blue-400">
-
+              <figure className="overflow-hidden relative justify-self-center w-[clamp(30px,80%,70px)] h-auto aspect-square">
+                <Image alt={experience.institutionName} src={experience.image} />
               </figure>
               <div className="flex flex-col gap-y-2">
                 <span className="w-full flex gap-x-2 justify-between">
