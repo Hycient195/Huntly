@@ -47,7 +47,7 @@ export default function DashboardLayout({ children, params }: IProps) {
       </aside>
 
       <main className="w-full relative overflow-scroll h-screen max-h-[100vh] min-h-max grid grid-rows-[max-content_1fr]">
-        <nav className="w-full z-[2] sticky top-0 bg-white flex justify-between py-3 px-6 border border-x-0 items-center border-b-slate-300">
+        <nav className="w-full z-[3] sticky top-0 bg-white flex justify-between py-3 px-6 border border-x-0 items-center border-b-slate-300">
           <h1 className="text-2xl font-bold text-slate-800">Messages</h1>
           <button className="btn-secondary rounded-sm">Back to homepage</button>
         </nav>
