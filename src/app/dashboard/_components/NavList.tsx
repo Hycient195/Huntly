@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 
 export const NavList = ({ route }: { route: Array<typeof navRoutes[0]> }) => {
   const pathname = usePathname();
-  const highlightActive = (arg: string): boolean => pathname.includes(arg);
+
+  const highlightActive = (arg: string): boolean => pathname.split(/\//).includes(arg.split(/\//)[0]);
 
   return (
     <ul className="flex flex-col gap-y-2 my-[2vh]">

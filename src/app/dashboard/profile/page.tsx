@@ -76,7 +76,7 @@ const DashboardUserProfile = memo(() => {
       </section>
 
 
-      <aside className="h-max min-w-[200px] flex flex-col gap-3 lg:gap-5 xl:gap-6">
+      <aside className="h-max min-w-[250px] flex flex-col gap-3 lg:gap-5 xl:gap-6">
         <AdditionalDetails details={additionalDetails} />
         <SocialLinks details={socialLinks} />
       </aside>
