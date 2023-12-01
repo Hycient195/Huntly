@@ -1,11 +1,13 @@
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { memo } from "react";
 
 interface IProps {
   arrangement: "grid"|"list"
+  routePrefix: string
 }
 
-const JobList: React.FC<IProps> = memo(({ arrangement }) => {
+const JobList: React.FC<IProps> = memo(({ arrangement, routePrefix }) => {
   const router = useRouter();
 
 
@@ -14,7 +16,8 @@ const JobList: React.FC<IProps> = memo(({ arrangement }) => {
       <ul className={`grid ${arrangement === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4": "grid-flow-row"} flex-col gap-2 overflow-y-auto`}>
         {
           Array.from({ length: 20 }).map((_, index: number) => (
-            <li key={index} onClick={() => router.push(`/dashboard/jobs/${index}`)} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border border-slate-300 hover:cursor-pointer hover:bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-3 lg:gap-x-3 xl:gap-x-4`}>
+            <li key={index}>
+              <Link href={`${routePrefix}/${index}`} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border border-slate-300 hover:cursor-pointer hover:bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-3 lg:gap-x-3 xl:gap-x-4`}>
               <figure className="w-[50px] justify-self-center rounded-full aspect-square h-auto bg-primary/50">
 
               </figure>
@@ -40,6 +43,7 @@ const JobList: React.FC<IProps> = memo(({ arrangement }) => {
                 </div>
                 <p className="text-xs font-normal text-slate-400"><span className="font-semibold text-slate-700">8 applied</span> of 12 capacity</p>
               </div>
+              </Link>
             </li>
           ))
         }

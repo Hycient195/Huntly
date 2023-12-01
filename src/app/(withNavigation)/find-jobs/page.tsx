@@ -121,7 +121,7 @@ export default function FindJobs() {
             </span>
           </div>
 
-          <JobList arrangement={listArrangement} />
+          <JobList routePrefix="/find-jobs" arrangement={listArrangement} />
           
         </div>
       </section>

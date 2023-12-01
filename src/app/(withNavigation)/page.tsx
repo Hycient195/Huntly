@@ -4,7 +4,7 @@ import Explore from '../../_SharedComponents/Explore'
 import FeaturedJobs from '../../_SharedComponents/FeaturedJobs'
 import CompanyList from '../../_SharedComponents/CompanyList'
 import { companies } from '../(withoughtNavigation)/dashboard/companies/data'
-import LatestJobCard from '../_components/LatestJobsCard'
+import LatestJobCard from '../../_SharedComponents/LatestJobsCard'
 import { openJobs } from '../data'
 import Link from 'next/link'
 
@@ -20,7 +20,7 @@ export default function Home() {
             <span className="text-slate-800">Featured </span>
             <span className="text-sky-400">jobs</span>
           </div>
-          <CompanyList scroll={false} companies={companies} arrangement="grid" />
+          <CompanyList routeProfix="/find-jobs" scroll={false} companies={companies} arrangement="grid" />
         </section>
         
       </div>
@@ -43,7 +43,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-[clamp(10px,2.8vw,40px)]">
             {
               openJobs && openJobs.map((job: typeof openJobs[0], index: number) => (
-                <LatestJobCard key={index} />
+                <LatestJobCard job={job} key={index} />
               ))
             }
           </div>

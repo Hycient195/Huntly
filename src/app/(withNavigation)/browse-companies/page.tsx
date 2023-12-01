@@ -89,6 +89,7 @@ export default function BrowseCompanies() {
             <span className="text-sm flex flex-row items-center gap-x-2">
               <p className="text-slate-400">Sort by: </p>
               <select name="" id="" className="text-slate-600 px-2 py-1 outline-none font-semibold appearance-none bg-white">
+                <option value="">Recommended</option>
                 <option value="">Most Relevant</option>
               </select>
               <button onClick={() => listArrangement === "grid" ? setListArrangement("list") : setListArrangement("grid")} className="text-slate-500 rounded-md hover:text-primary hover:bg-primary-pale p-2 duration-300">
@@ -108,7 +109,7 @@ export default function BrowseCompanies() {
             </span>
           </div>
 
-          <CompanyList arrangement={listArrangement} scroll={false} companies={companies} />
+          <CompanyList routeProfix="/find-jobs" arrangement={listArrangement} scroll={false} companies={companies} />
 
           <div className="flex  bottom-4 bg-white mx-auto divide-x divide-dashed border max-w-max rounded-xl border-primary/50  divide-blue-400 mt-4 p-1.5">
             <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-1">NEXT</button>

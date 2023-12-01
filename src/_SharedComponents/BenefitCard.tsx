@@ -1,6 +1,6 @@
 import { memo } from "react";
 import Image from "next/image";
-import { benefits } from "../data";
+import { benefits } from "../_SharedData/perksAndBenefits";
 
 
 

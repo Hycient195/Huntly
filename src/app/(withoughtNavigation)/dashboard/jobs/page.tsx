@@ -103,7 +103,7 @@ const DashboardJobs = memo(() => {
             </span>
           </div>
 
-          <JobList arrangement={listArrangement} />
+          <JobList routePrefix="/dashboard/jobs" arrangement={listArrangement} />
           
         </div>
       </section>

@@ -91,7 +91,7 @@ const DashboardJobs = memo(() => {
             </span>
           </div>
 
-          <CompanyList arrangement={listArrangement} companies={companies} />
+          <CompanyList routeProfix="/dashboard/jobs" arrangement={listArrangement} companies={companies} />
 
           <div className="flex sticky bottom-4 bg-white mx-auto divide-x divide-dashed border max-w-max rounded-lg border-primary/50  divide-blue-400 mt-4 p-1.5">
             <button className="bg-primary-pale/30 rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-2">NEXT</button>
