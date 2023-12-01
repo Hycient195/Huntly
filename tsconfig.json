@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@components/* @redux/* @utils/*": ["./src/*"]
+      "@sharedComponents/*": ["./src/_SharedComponents/*"],
+      "@sharedData/*": ["./src/_SharedData/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

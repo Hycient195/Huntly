@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Epilogue } from 'next/font/google'
 import './globals.css'
 import Head from 'next/head'
+import Footer from './_components/Footer'
 
 const epilogue = Epilogue({ subsets: ['latin'] })
 
@@ -27,7 +28,6 @@ export default function RootLayout({
         />
       </Head>
       <body className={`${epilogue.className}`}>
-
         {children}
       </body>
     </html>
