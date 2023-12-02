@@ -10,8 +10,6 @@ const Header = memo(() => {
   const router = useRouter();
   const pathname = usePathname();
 
-  console.log(pathname)
-
   return (
     <div className="justify-center items-center flex w-full flex-col px-5 max-md:max-w-full">
         <div className="flex w-full max-w-[1192px] items-stretch justify-between gap-5 max-md:max-w-full max-md:flex-wrap">
@@ -26,7 +24,7 @@ const Header = memo(() => {
                   className=" h-full w-full object-cover object-center"
                 />
               </figure>
-              <div className="text-slate-800 text-3xl font-bold leading-9 tracking-tight my-auto">
+              <div className="text-slate-700 text-3xl font-bold leading-9 tracking-tight my-auto">
                 Huntly
               </div>
             </Link>

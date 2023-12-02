@@ -8,8 +8,8 @@ export default function SignIn() {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full">
         <div className="hidden md:flex flex-col items-stretch  max-md:w-full max-md:ml-0">
           <div className="bg-slate-50 justify-between flex grow flex-col w-full pl-16 pr-14 pt-7 items-start max-md:max-w-full max-md:mt-10 max-md:px-5">
-            <Link href="/" className="flex  items-stretch gap-2 ml-14 max-md:ml-2.5">
-              <figure className="relative h-[45px] w-[45px]">
+            <Link href="/" className="flex  items-center gap-2 ml-14 max-md:ml-2.5">
+              <figure className="relative h-[40px] w-[40px]">
                 <Image
                   alt="sign-up banner"
                   fill
@@ -19,7 +19,7 @@ export default function SignIn() {
                 />
               </figure>
            
-              <div className="text-gray-800 text-3xl font-bold leading-9 tracking-tight grow whitespace-nowrap mt-2 self-start">
+              <div className="text-gray-800 text-3xl font-bold leading-9 tracking-tight grow whitespace-nowrap mt-1 self-start">
                 Huntly
               </div>
             </Link>

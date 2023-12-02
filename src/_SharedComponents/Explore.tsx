@@ -5,7 +5,7 @@ export default function Explore() {
     <div className="flex flex-col items-stretch">
       <div className="items-center bg-white flex w-full flex-col justify-center">
         <div className="flex w-full flex-col items-stretch max-md:max-w-full">
-          <div className="text-gray-800 text-lg leading-7 opacity-50 max-md:max-w-full">
+          <div className="text-gray-700 text-lg leading-7 opacity-50 max-md:max-w-full">
             Companies we helped grow
           </div>
           <div className="justify-between items-start flex gap-5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:justify-center">

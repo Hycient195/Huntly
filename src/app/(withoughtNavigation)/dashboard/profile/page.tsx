@@ -65,14 +65,14 @@ const DashboardUserProfile = memo(() => {
         </section>
 
         {/* Experiences Sub-Section */}
-        {/* <UserProfileExperiences experiences={jobExperiences} /> */}
+        <UserProfileExperiences experiences={jobExperiences} />
 
         {/* Education Sub-Section */}
         <UserProfileEducation experiences={education} />
 
-        {/* <UserProfileSkills /> */}
+        <UserProfileSkills />
        
-        {/* <UserProfilePortfolio projectList={projects} /> */}
+        <UserProfilePortfolio projectList={projects} />
       </section>
 
 

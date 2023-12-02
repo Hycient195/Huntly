@@ -5,8 +5,17 @@ import BenefitCard from "./_components/BenefitCard";
 import Link from "next/link";
 import LatestJobCard from "@sharedComponents/LatestJobsCard";
 import { openJobs } from "@sharedData/openJobs";
+import ApplicationModal from "./_components/ApplicationModal";
 
-const JobDetails = memo(() => {
+interface IProps {
+  searchParams: { [key: string]: string | string[] | undefined}
+}
+
+const JobDetails: React.FC<IProps> = memo(({ searchParams }) => {
+  let isApplicationModalOpen: boolean = false;
+  if (searchParams?.modalOpen) isApplicationModalOpen = JSON.parse(searchParams?.modalOpen as string) as boolean;
+  console.log(isApplicationModalOpen);
+
   return (
     <main className="">
       <section className="p-4 md:px-4 lg:px-6 xl:px-8 bg-indigo-50/80 py-[clamp(32px,7vmin,100px)] rounded-md">
@@ -30,7 +39,7 @@ const JobDetails = memo(() => {
               </svg>
             </button>
             <div className="h-[40px] w-[1px] bg-slate-300" />
-            <button className="btn-primary text-sm px-10 py-2.5 max-h-max">Apply</button>
+            <Link href={{ query: { modalOpen: !isApplicationModalOpen ? true : !isApplicationModalOpen }}} className="btn-primary text-sm px-10 py-2.5 max-h-max">Apply</Link>
           </span>
         </div>
       </section>
@@ -207,6 +216,7 @@ const JobDetails = memo(() => {
           </div>
         </div>
       </section>
+      <ApplicationModal isOpen={isApplicationModalOpen} />
     </main>
   )
 });
