@@ -10,7 +10,7 @@ import SocialLinks from "./_components/SocialLinks";
 
 const DashboardUserProfile = memo(() => {
   return (
-    <main className="p-2 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-cols-[4fr_1.4fr] gap-2 lg:gap-4 xl:gap-7">
+    <main className="p-2 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-cols-1 md:grid-cols-[4fr_1.4fr] gap-2 lg:gap-4 xl:gap-7">
       <section className="flex flex-col gap-3 lg:gap-5 xl:gap-6">
 
         <div className="grid grid-rows-[2fr_3fr] h-[clamp(300px,40vh,500px)]">

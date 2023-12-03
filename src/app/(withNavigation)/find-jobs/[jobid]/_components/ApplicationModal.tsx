@@ -20,8 +20,8 @@ export default function ApplicationModal({ isOpen, setIsOpen }: IProps) {
               <div className="text-slate-700 text-2xl font-semibold leading-7 whitespace-nowrap max-md:max-w-full">
                 Social Media Assistant
               </div>
-              <div className="items-center text-slate-500/80 flex gap-4 mt-1 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
-                <span className="">Nomad</span> <span>Paris, France</span> <span>Full Time</span>
+              <div className="items-center text-slate-500/80 flex gap-3 mt-1 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+                <span className="">Nomad</span> • <span>Paris, France</span> • <span>Full Time</span>
               </div>
             </div>
           </div>

@@ -1,8 +1,16 @@
-
+import latestJobImage1 from "../../public/images/home/latest-job-8.png";
+import latestJobImage2 from "../../public/images/home/latest-job-2.png";
+import latestJobImage3 from "../../public/images/home/latest-job-3.png";
+import latestJobImage4 from "../../public/images/home/latest-job-4.png";
+import latestJobImage5 from "../../public/images/home/latest-job-5.png";
+import latestJobImage6 from "../../public/images/home/latest-job-6.png";
+import latestJobImage7 from "../../public/images/home/latest-job-7.png";
+import latestJobImage8 from "../../public/images/home/latest-job-8.png";
 
 
 export const openJobs = [
   {
+    image: latestJobImage1,
     title: "Full Stack Developer",
     companyName: "Tech Innovators Ltd",
     location: {
@@ -13,6 +21,7 @@ export const openJobs = [
     jobIndustry: "Technology"
   },
   {
+    image: latestJobImage2,
     title: "Marketing Manager",
     companyName: "Digital Marketing Experts",
     location: {
@@ -23,6 +32,7 @@ export const openJobs = [
     jobIndustry: "Marketing"
   },
   {
+    image: latestJobImage3,
     title: "Data Scientist",
     companyName: "Data Analytics Pro",
     location: {
@@ -33,6 +43,7 @@ export const openJobs = [
     jobIndustry: "Technology"
   },
   {
+    image: latestJobImage4,
     title: "UX/UI Designer",
     companyName: "Design Innovations Inc",
     location: {
@@ -43,6 +54,7 @@ export const openJobs = [
     jobIndustry: "Design"
   },
   {
+    image: latestJobImage5,
     title: "Sales Representative",
     companyName: "Sales Pro Solutions",
     location: {
@@ -53,6 +65,7 @@ export const openJobs = [
     jobIndustry: "Sales"
   },
   {
+    image: latestJobImage6,
     title: "HR Specialist",
     companyName: "HR Solutions Group",
     location: {
@@ -63,6 +76,7 @@ export const openJobs = [
     jobIndustry: "Human Resources"
   },
   {
+    image: latestJobImage7,
     title: "Financial Analyst",
     companyName: "Finance Pro Analytics",
     location: {
@@ -73,6 +87,7 @@ export const openJobs = [
     jobIndustry: "Finance"
   },
   {
+    image: latestJobImage8,
     title: "Network Engineer",
     companyName: "Tech Networking Solutions",
     location: {

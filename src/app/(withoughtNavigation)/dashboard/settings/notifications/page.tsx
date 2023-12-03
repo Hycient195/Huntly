@@ -8,7 +8,7 @@ export default function NotificationsPreferences() {
   // };
 
   return (
-    <div className="self-stretch bg-white flex flex-col px-2 py-6 items-start max-md:px-5">
+    <div className="self-stretch bg-white flex flex-col py-6 items-start mx-2">
       <header className="justify-center text-slate-800 text-lg font-semibold leading-7 max-w-[492px] max-md:max-w-full">
         Basic Information
       </header>

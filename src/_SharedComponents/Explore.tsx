@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { exploreCategory } from "../app/(withNavigation)/data";
 
 export default function Explore() {
   return (
@@ -56,187 +57,28 @@ export default function Explore() {
             </Link>
           </div>
           <div className="mt-12 max-md:max-w-full max-md:mt-10">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-              <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0ad0b43-db49-498a-af42-0d52c0a4d5f1?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Design
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      235 jobs available
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[clamp(0.8rem,1.8vw,2rem)]">
+              {
+                exploreCategory.map((category: typeof exploreCategory[0], index: number) => (
+                  <div className="items-center group border rounded-lg hover:bg-primary duration-500 flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
+                    <div className="text-primary group-hover:text-white w-[40%] h-auto aspect-square flex items-center justify-center"> {category.icon}</div>
+                    <div className="text-slate-600 group-hover:text-white tracking-wide text-2xl font-semibold leading-7 self-stretch mt-8">
+                      {category.title}
                     </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f93b32a-5d59-49c0-a1f7-221c277dc957?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/80d82313-aed0-40a0-8664-e001d0bdae29?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Sales
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      756 jobs available
+                    <div className="items-stretch self-stretch flex justify-between gap-4 mt-1 px-px">
+                      <div className="text-slate-400 group-hover:text-white text-md leading-7">
+                        {category.details}
+                      </div>
+                      <div className="group-hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                      </div>
+
                     </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/be5296e8-c1f7-4a4c-b0b8-595f01a082b5?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
                   </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center bg-indigo-600 flex grow flex-col w-full p-8 max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d2d7d8e3-ee93-4270-8851-9a40ac0c28d9?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-white text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Marketing
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-white text-lg leading-7">
-                      140 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d5c66e9-2bb3-4781-b048-e67c38b70bdc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/afda9a15-ce84-4fa3-9f7e-bda855ee7689?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Finance
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      325 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f866fa2-de2f-4a25-8a4b-040a1381a079?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 max-md:max-w-full">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-              <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2ebcc437-7712-44b3-8e61-40cae8acd0a6?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Technology
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      436 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/23ec5b05-2b2b-4841-8a1a-6a45086db4fb?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/9911269f-8cac-414d-b7d9-a0ee6af4b33e?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Engineering
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      542 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/d36bfc9a-a60a-4d86-8e79-71c0697d5b7c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1a97a03-f61f-4fae-bbd2-c164e468e74a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Business
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-0.5">
-                    <div className="text-slate-500 text-lg leading-7">
-                      211 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f95fd24-3760-422f-9282-493332ddf7f8?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-center border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/06c0367c-7837-40e3-b538-90d6819554ba?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[4.38] object-contain object-center w-[210px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-2xl font-semibold leading-7 self-stretch mt-8">
-                    Human Resource
-                  </div>
-                  <div className="items-stretch self-stretch flex justify-between gap-4 mt-3 px-px">
-                    <div className="text-slate-500 text-lg leading-7">
-                      346 jobs available
-                    </div>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb1c33ce-db76-4654-a8c1-a6da653f9511?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-center shrink-0 max-w-full my-auto"
-                    />
-                  </div>
-                </div>
-              </div>
+                ))
+              }
             </div>
           </div>
         </div>

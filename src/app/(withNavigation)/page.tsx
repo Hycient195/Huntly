@@ -5,8 +5,8 @@ import FeaturedJobs from '../../_SharedComponents/FeaturedJobs'
 import CompanyList from '../../_SharedComponents/CompanyList'
 import { companies } from '../(withoughtNavigation)/dashboard/companies/data'
 import LatestJobCard from '../../_SharedComponents/LatestJobsCard'
-import { openJobs } from '../data'
 import Link from 'next/link'
+import { openJobs } from '@sharedData/openJobs'
 
 export default function Home() {
   return (
@@ -52,18 +52,3 @@ export default function Home() {
     </main>
   )
 }
-
-// Generate and populate the data format with 8 random but reasonable data in the structure below
-
-// const openJobs = [
-//   {
-//     title: "",
-//     companyName: "",
-//     location: {
-//       country: "",
-//       city: ""
-//     },
-//     jobType: "",
-//     jobIndustry: ""
-//   }
-// ]

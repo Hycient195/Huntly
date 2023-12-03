@@ -133,8 +133,8 @@ export default function MyProfile() {
         <div className="bg-zinc-200 self-stretch shrink-0 h-px mt-6 max-md:max-w-full" />
         <div className="self-stretch mt-6 max-md:max-w-full max-md:pr-5">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-[41%] max-md:w-full max-md:ml-0">
-              <div className="items-stretch flex flex-col max-md:mt-10">
+            <div className="flex flex-row gap-6 flex-wrap">
+              <div className="items-stretch flex flex-col  max-md:mt-10">
                 <div className="justify-center text-slate-800 text-base font-semibold leading-7">
                   Account Type
                 </div>
@@ -142,37 +142,24 @@ export default function MyProfile() {
                   You can update your account type
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col items-stretch w-[59%] ml-5 max-md:w-full max-md:ml-0">
-              <div className="items-stretch flex grow flex-col max-md:mt-10">
-                <div className="flex justify-between gap-4 items-start">
-                  <div className="flex aspect-[1.3333333333333333] flex-col justify-center items-stretch p-0.5">
-                    <div className="stroke-[1px] flex aspect-[1.4] flex-col justify-center items-stretch p-1 rounded-[50%]">
-                      <div className="flex w-[18px] shrink-0 h-3 flex-col rounded-[50%] max-md:mr-0.5" />
-                    </div>
-                  </div>
-                  <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
-                    <div className="text-slate-800 text-base font-medium leading-7">
-                      Job Seeker
-                    </div>
-                    <div className="text-slate-600 text-base leading-7">
-                      Looking for a job
-                    </div>
-                  </div>
+              <div className="items-stretch flex flex-col max-md:mt-10">
+                <div className="justify-center text-slate-800 text-base font-semibold leading-7">
+                  Job Seeker
                 </div>
-                <div className="flex justify-between gap-5 mt-6 px-px items-start">
-                  <div className="stroke-[2px] flex w-5 shrink-0 h-5 flex-col rounded-[50%]" />
-                  <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
-                    <div className="text-slate-800 text-base font-medium leading-7">
-                      Employer
-                    </div>
-                    <div className="text-gray-800 text-base leading-7">
-                      Hiring, sourcing candidates, or posting a jobs
-                    </div>
-                  </div>
+                <div className="text-slate-600 text-base leading-7 mt-1">
+                  Looking for a job
+                </div>
+              </div>
+              <div className="items-stretch flex flex-col max-md:mt-10">
+                <div className="justify-center text-slate-800 text-base font-semibold leading-7">
+                  Employer
+                </div>
+                <div className="text-slate-600 text-base leading-7 mt-1">
+                  Hiring, sourcing candidates, or posting a jobs
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
         <div className="bg-zinc-200 self-stretch shrink-0 h-px mt-6 max-md:max-w-full" />

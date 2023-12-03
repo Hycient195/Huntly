@@ -11,8 +11,8 @@ interface IProps {
 export default function DashboardLayout({ children, params }: IProps) {
 
   return (
-    <div className="grid fixed w-full grid-cols-[max-content_1fr]">
-      <aside className="max-w-[270px] w-[20vw] min-w-[240px] bg-indigo-50/30 h-screen border border-r-slate-200">
+    <div className="grid fixed w-full grid-cols-1 md:grid-cols-[max-content_1fr]">
+      <aside className="hidden md:block max-w-[270px] w-[20vw] min-w-[240px] bg-indigo-50/30 h-screen border border-r-slate-200">
         <Link href="/" className="px-4 py-3 flex flex-row items-center gap-x-2">
           <Image width={35} height={35} alt="Logo" src="/logo.svg" />
           <h1 className="text-2xl font-semibold -mb-2 text-slate-800">Huntly</h1>

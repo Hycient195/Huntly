@@ -1,6 +1,6 @@
 export default function SettingsDetailsPage() {
   return (
-    <div className="items-end self-stretch bg-white flex flex-col px-2 py-6 max-md:px-5">
+    <div className="items-end bg-white flex flex-col px-2 py-6">
       <div className="justify-center text-gray-800 text-lg font-semibold leading-7 max-w-[421px] self-start max-md:max-w-full">
         Basic Information
       </div>
