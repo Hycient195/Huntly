@@ -92,7 +92,7 @@ const DashboardJobs = memo(() => {
 
           <CompanyList routeProfix="/dashboard/jobs" arrangement={listArrangement} companies={companies} />
 
-          <div className="flex w-[calc(100vw-2rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-xl border-primary/50  divide-blue-400 mt-4 p-1.5">
+          <div className="flex max-w-[calc(100vw-2rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-xl border-primary/50  divide-blue-400 mt-4 p-1.5">
             <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-1">PREV</button>
             <div className=" text-ellipsis whitespace-nowrap overflow-hidden">
               {
