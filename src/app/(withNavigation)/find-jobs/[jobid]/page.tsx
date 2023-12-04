@@ -185,7 +185,7 @@ const JobDetails: React.FC<IProps> = memo(({ searchParams }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 grid-rows-2 h-auto aspect-[2/1] gap-[clamp(10px,1vmax,60px)] min-h-[200px] max-h-[400px]">
+        <div className="grid grid-cols-3 grid-rows-2 h-auto aspect-[2/1] gap-[clamp(10px,1vmax,60px)] md:min-h-[200px] md:max-h-[400px]">
           <figure className="overflow-hidden col-start-1 row-start-1 col-span-2 row-span-2 relative"><Image fill src={aboutImages.img1} className="object-cover" alt="about" /></figure>
           <figure className="overflow-hidden col-start-3 row-start-1 col-span-1 row-span-1 relative"><Image fill src={aboutImages.img2} className="object-cover" alt="about" /></figure>
           <figure className="overflow-hidden col-start-3 row-start-2 col-span-1 row-span-1 relative"><Image fill src={aboutImages.img3} className="object-cover" alt="about" /></figure>

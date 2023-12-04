@@ -32,7 +32,7 @@ const UserProfileExperiences = memo(({ experiences } : { experiences: Array<type
           experiences && experiences?.filter((_, index: number) => index < visibleExperiencesCount)?.map((experience: typeof jobExperiences[0], index: number) => (
             <>
               <li key={index} className="grid grid-cols-[1fr_5fr]">
-                <figure className="overflow-hidden bg-pink-200 rounded-full relative justify-self-center w-[clamp(30px,80%,70px)] h-auto aspect-square">
+                <figure className="overflow-hidden bg-pink-200 rounded-full relative justify-self-center w-[clamp(40px,80%,70px)] h-auto aspect-square">
                   { experience.image && <Image alt={experience.title} src={experience.image} /> }
                   
                 </figure>

@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <div className="p-[clamp(10px,3vw,40px)] container mx-auto max-w-screen-xl">
+      <div className="p-3.5 lg:p-[clamp(10px,3vw,40px)] container mx-auto max-w-screen-xl">
         <Explore />
 
-        <section className="my-[clamp(40px,10vh,100px)]">
+        <section className="mt-[clamp(40px,10vh,100px)]">
           <div className="mb-[clamp(10px,2vw,20px)] text-sky-400 text-5xl font-semibold leading-[53px] grow shrink basis-auto max-md:text-4xl max-md:leading-[49px]">
             <span className="text-slate-800">Featured </span>
             <span className="text-sky-400">jobs</span>
@@ -26,7 +26,7 @@ export default function Home() {
       </div>
 
       <section className="mt-[clamp(40px,2vh,80px)] bg-indigo-50/70">
-        <div className="px-[clamp(10px,3vw,40px)] py-[clamp(30px,5vh,80px)] container mx-auto max-w-screen-xl">
+        <div className="px-3 lg:px-[clamp(10px,3vw,40px)] py-[clamp(30px,5vh,80px)] container mx-auto max-w-screen-xl">
           <div className="mb-[clamp(10px,2vw,20px)] flex flex-row flex-wrap gap-x-2 justify-between">
             <h2 className=" text-sky-400 text-5xl font-semibold leading-[53px] grow shrink basis-auto max-md:text-4xl max-md:leading-[49px]">
               <span className="text-slate-800">Latest </span>
@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-[clamp(10px,2.8vw,40px)]">
+          <div className="grid grid-cols-2 gap-[clamp(10px,2vw,40px)]">
             {
               openJobs && openJobs.map((job: typeof openJobs[0], index: number) => (
                 <LatestJobCard job={job} key={index} />

@@ -9,7 +9,7 @@ const DashboardJobs = memo(() => {
   const [ listArrangement, setListArrangement ] = useState<"grid"|"list">("grid");
 
   return (
-    <main className="p-2 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-rows-[max-content_max-content_1fr]">
+    <main className="p-3 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-rows-[max-content_max-content_1fr]">
       <section className="">
         <form className="border border-slate-200  px-[2vw] py-[2vh] grid grid-cols-[1fr_1fr_max-content] gap-x-[5%]">
 
@@ -44,8 +44,8 @@ const DashboardJobs = memo(() => {
       <div className="h-[1px] liner my-[2vh] bg-slate-300 fullwidth" />
 
       {/* Jobs Section */}
-      <section className="grid gap-x-2 lg:gap-x-3 xl:gap-x-4 grid-cols-[1fr_5fr] max-h-[calc(100vh-12rem)] h-full">
-        <aside className="border-r border-r-slate-300  overflow-y-auto min-w-[200px]">
+      <section className="grid gap-x-2 lg:gap-x-3 xl:gap-x-4 lg:grid-cols-[1fr_5fr] max-h-[calc(100vh-12rem)] h-full">
+        <aside className="hidden lg:block border-r border-r-slate-300  overflow-y-auto min-w-[200px]">
           <details open className="appearance-none mb-5">
             <summary className="text-slate-500 text-center text-[0px] h-[15px] relative marker font-semibold items-center gap-x-2 justify-between marker:appearance-none mb-4 ">
               <h3 className=" text-[15px] block absolute">Industry</h3>
@@ -59,7 +59,6 @@ const DashboardJobs = memo(() => {
             </summary>
             <FilterSelector filters={companySizeFilter} />
           </details>
-
         </aside>
 
         {/* Job Lists Section */}
@@ -93,14 +92,16 @@ const DashboardJobs = memo(() => {
 
           <CompanyList routeProfix="/dashboard/jobs" arrangement={listArrangement} companies={companies} />
 
-          <div className="flex sticky bottom-4 bg-white mx-auto divide-x divide-dashed border max-w-max rounded-lg border-primary/50  divide-blue-400 mt-4 p-1.5">
-            <button className="bg-primary-pale/30 rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-2">NEXT</button>
-            {
-              Array.from({ length: 6}).map((_, index: number) => (
-                <button key={index} className="bg-primary-pale/30 text-primary/90 px-6 py-2">{index+1}</button>
-              ))
-            }
-            <button className="bg-primary-pale/30 rounded-tr-lg rounded-br-lg text-primary/90 px-6 py-2">PREV</button>
+          <div className="flex w-[calc(100vw-2rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-xl border-primary/50  divide-blue-400 mt-4 p-1.5">
+            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-1">PREV</button>
+            <div className=" text-ellipsis whitespace-nowrap overflow-hidden">
+              {
+                Array.from({ length: 6}).map((_, index: number) => (
+                  <button key={index} className="bg-primary-pale/30 hover:bg-primary-pale duration-300 text-primary/90 px-6 py-1">{index+1}</button>
+                ))
+              }
+            </div>
+            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tr-lg rounded-br-lg text-primary/90 px-6 py-1">NEXT</button>
           </div>
         </div>
       </section>

@@ -4,6 +4,8 @@ import { openJobs } from "@sharedData/openJobs";
 import { benefits } from "@sharedData/perksAndBenefits";
 import Link from "next/link";
 import * as React from "react";
+import { gallery, skills, teamMembers } from "./data";
+import Image from "next/image";
 
 export default function CompanyProfile() {
   return (
@@ -11,33 +13,33 @@ export default function CompanyProfile() {
       <div className="bg-slate-50 flex w-full flex-col items-stretch pb-12 max-md:max-w-full">
 
         <div className="self-center flex w-full max-w-[999px] flex-col items-stretch mt-11 mb-6 max-md:max-w-full max-md:mt-10">
-          <div className="text-slate-800 text-base leading-7 whitespace-nowrap max-md:max-w-full">
-            <span className="text-slate-500">Home / Companies / </span>
-            <span className="text-slate-800">Nomad</span>
-          </div>
           <div className="mt-12 max-md:max-w-full max-md:mt-10">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-              <div className="flex flex-col items-stretch w-[19%] max-md:w-full max-md:ml-0">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                  className="aspect-square object-contain object-center w-[189px] overflow-hidden shrink-0 max-w-full max-md:mt-6"
-                />
-              </div>
-              <div className="flex flex-col items-stretch w-[81%] ml-5 max-md:w-full max-md:ml-0">
-                <div className="items-stretch flex flex-col my-auto max-md:max-w-full max-md:mt-9">
-                  <div className="items-stretch flex w-[245px] max-w-full gap-3 self-start">
-                    <div className="text-slate-800 text-5xl font-semibold leading-[53px] grow whitespace-nowrap max-md:text-4xl max-md:leading-[49px]">
-                      Stripe
+            <div className="gap-5 p-3">
+              
+              <div className="flex flex-col">
+                <div className="grid grid-cols-[1fr_7fr] gap-2 items-center">
+                  <figure className="flex flex-col w-[clamp(100px,18vmin,250px)] overflow-hidden aspect-square h-auto">
+                    <img
+                      loading="lazy"
+                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/4563ed3f5da1f6578b078e110e17e07472d93582615cd82d08c6651fe7803979?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
+                      className="aspect-square object-contain object-center overflow-hidden"
+                    />
+                  </figure>
+                  <div className="">
+                    <div className=" flex  max-w-full gap-3 self-start">
+                      <div className="text-slate-700 text-5xl font-semibold  grow whitespace-nowrap max-md:text-4xl max-md:leading-[49px]">
+                        Stripe
+                      </div>
+                      <div className="text-indigo-600 text-center max-w-max text-base leading-7 whitespace-nowrap justify-center border border-[color:var(--brands-primary,#4640DE)] self-center grow my-auto px-4 py-1 border-solid">
+                        43 Jobs
+                      </div>
                     </div>
-                    <div className="text-indigo-600 text-center text-base leading-7 whitespace-nowrap justify-center items-stretch border border-[color:var(--brands-primary,#4640DE)] self-center grow my-auto px-3 py-1 border-solid">
-                      43 Jobs
-                    </div>
+                    <a href="https://stripe.com" className="text-indigo-600 text-base font-semibold leading-7 whitespace-nowrap mt-3 self-start">
+                      https://stripe.com
+                    </a>
                   </div>
-                  <div className="text-indigo-600 text-base font-semibold leading-7 whitespace-nowrap mt-3 self-start">
-                    https://stripe.com
-                  </div>
-                  <div className="items-stretch flex justify-between gap-5 mt-6 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+                </div>
+                <div className="items-stretch flex justify-between gap-5 mt-6 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
                     <div className="items-center flex justify-between gap-4">
                       <div className="items-center bg-white flex aspect-square flex-col justify-center w-11 h-11 my-auto px-2.5 rounded-[50px]">
                         <img
@@ -46,7 +48,7 @@ export default function CompanyProfile() {
                           className="aspect-square object-contain object-center w-full overflow-hidden"
                         />
                       </div>
-                      <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
+                      <div className="items-stretch self-stretch flex grow flex-col">
                         <div className="text-slate-600 text-base leading-7 whitespace-nowrap">
                           Founded
                         </div>
@@ -63,7 +65,7 @@ export default function CompanyProfile() {
                           className="aspect-square object-contain object-center w-full overflow-hidden"
                         />
                       </div>
-                      <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
+                      <div className="items-stretch self-stretch flex grow flex-col">
                         <div className="text-slate-600 text-base leading-7 whitespace-nowrap">
                           Employees
                         </div>
@@ -80,7 +82,7 @@ export default function CompanyProfile() {
                           className="aspect-square object-contain object-center w-full justify-center items-center overflow-hidden"
                         />
                       </div>
-                      <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
+                      <div className="items-stretch self-stretch flex grow flex-col">
                         <div className="text-slate-600 text-base leading-7 whitespace-nowrap">
                           Location
                         </div>
@@ -97,7 +99,7 @@ export default function CompanyProfile() {
                           className="aspect-square object-contain object-center w-full overflow-hidden"
                         />
                       </div>
-                      <div className="items-stretch self-stretch flex grow basis-[0%] flex-col">
+                      <div className="items-stretch self-stretch flex grow flex-col">
                         <div className="text-slate-600 text-base leading-7 whitespace-nowrap">
                           Industry
                         </div>
@@ -107,7 +109,6 @@ export default function CompanyProfile() {
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -115,7 +116,7 @@ export default function CompanyProfile() {
       </div>
 
       {/* Details Section */}
-      <div className="items-center bg-white flex flex-col justify-center px-16 py-12 max-md:px-5">
+      <div className="items-center bg-white flex flex-col justify-center p-3 py-12">
       <div className="w-full max-w-[1192px] my-6 max-md:max-w-full">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
           <div className="flex flex-col items-stretch w-[67%] max-md:w-full max-md:ml-0">
@@ -125,7 +126,7 @@ export default function CompanyProfile() {
               </div>
               <div className="text-slate-600 text-base leading-7 mt-4 max-md:max-w-full">
                 Stripe is a software platform for starting and running internet
-                businesses. Millions of businesses rely on Stripe’s software
+                businesses. Millions of businesses rely on Stripe&apos;s software
                 tools to accept payments, expand globally, and manage their
                 businesses online. Stripe has been at the forefront of expanding
                 internet commerce, powering new business models, and supporting
@@ -173,38 +174,26 @@ export default function CompanyProfile() {
                   linkedin.com/company/stripe
                 </div>
               </div>
-              <div className="mt-10 max-md:max-w-full">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                  <div className="flex flex-col items-stretch w-[65%] max-md:w-full max-md:ml-0">
-                    <img
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5f8e2d0efdc3074b298e0d7b2f74aae462f39656547987315000ea3639b23849?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                      className="aspect-[0.79] object-contain object-center w-full overflow-hidden grow max-md:max-w-full max-md:mt-3"
-                    />
-                  </div>
-                  <div className="flex flex-col items-stretch w-[35%] ml-5 max-md:w-full max-md:ml-0">
-                    <div className="items-stretch self-stretch flex grow flex-col max-md:mt-3">
-                      <img
-                        loading="lazy"
-                        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e68ea31d8b888b062c04ab7994bf3242862bca43ec49999bb124fe7c6dcb589c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                        className="aspect-[1.35] object-contain object-center w-full overflow-hidden"
-                      />
-                      <img
-                        loading="lazy"
-                        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fad332d1f9696cb98a55bff5ba55e421252210554a241f3d76d756af133d2ddd?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                        className="aspect-[1.35] object-contain object-center w-full overflow-hidden mt-3"
-                      />
-                      <img
-                        loading="lazy"
-                        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a9441ae76bdecc224d3b7ea09774ae0b2e0d202ccf65a244cd9fe4651ee3d717?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                        className="aspect-[1.35] object-contain object-center w-full overflow-hidden mt-3"
-                      />
-                    </div>
-                  </div>
+              <div className="grid mt-8 grid-cols-[5fr_3fr] w-full gap-2 h-auto aspect-[2/1]">
+                <figure className="relative overflow-hidden bg-green-400">
+                  <Image className="h-full w-full object-cover object-center" alt="gallery" src={gallery.gallery4} />
+                </figure>
+                <div className="grid grid-rows-3 gap-2">
+                  <figure className="relative overflow-hidden  bg-red-400">
+                    <Image className="object-cover w-full h-full object-center" alt="gallery" src={gallery.gallery1} />
+                  </figure>
+                  <figure className="relative overflow-hidden">
+                    <Image className="object-cover w-full h-full object-center" alt="gallery" src={gallery.gallery2} />
+                  </figure>
+                  <figure className="relative overflow-hidden">
+                    <Image className="object-cover w-full h-full object-center" alt="gallery" src={gallery.gallery3} />
+                  </figure>
                 </div>
               </div>
             </div>
+            
           </div>
+          
           <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
             <div className="items-start flex flex-col pt-2 max-md:mt-10">
               <div className="text-slate-800 text-3xl font-semibold leading-10 self-stretch whitespace-nowrap">
@@ -213,70 +202,26 @@ export default function CompanyProfile() {
               <div className="text-slate-600 text-base leading-7 self-stretch mt-6">
                 Learn about the technology and tools that Stripe uses.{" "}
               </div>
-              <div className="items-stretch self-stretch flex gap-2.5 mt-4 pr-14 max-md:pr-5">
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d30e0b9273880f5ec04dcd68eb5a42237f4161f504c0606f28371f2c2879a123?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-[74px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 self-stretch whitespace-nowrap mt-2.5">
-                    HTML 5
-                  </div>
-                </div>
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2c343c220ed5889110a50d359a930ec7c9203acd0145a12ea739720d6829a3bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-[74px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 whitespace-nowrap mt-2.5">
-                    CSS 3
-                  </div>
-                </div>
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/19a28493f4a283575b77cc141a2780899a99aa00c374841284af6103340fed4f?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-[1.12] object-contain object-center w-[83px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 self-stretch whitespace-nowrap mt-2.5">
-                    JavaScript
-                  </div>
-                </div>
-              </div>
-              <div className="items-stretch self-stretch flex gap-2.5 mt-2 pr-16 max-md:pr-5">
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/5b2843a23de7c3ad97bc9766701eb3907218a2d5d33f621623530fa8970b97bc?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-[74px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 whitespace-nowrap mt-2.5">
-                    Ruby
-                  </div>
-                </div>
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2b89d0a41f2e8f34270a01dd779e98cb39f6b9f4133c627eb06bf7b69bf57d5d?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-[74px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 self-stretch whitespace-nowrap mt-2.5">
-                    Mixpanel
-                  </div>
-                </div>
-                <div className="items-center flex grow basis-[0%] flex-col p-3">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7f619fc34dcf2df7748df61f0e33d3465892b6186f610ab43c5ef805ef24b8a?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-[74px] overflow-hidden"
-                  />
-                  <div className="text-slate-800 text-base leading-7 self-stretch whitespace-nowrap mt-2.5">
-                    Framer
-                  </div>
-                </div>
-              </div>
+              <div className=" flex-wrap flex gap-2.5 mt-4">
+                {
+                  skills && skills.map((skill: typeof skills[0], index: number) => (
+                    <div key={index} className="items-center  max-w-[100px] flex flex-col p-3">
+                      <figure className="w-[55px] relative h-auto aspect-square">
+                        <Image
+                          loading="lazy"
+                          alt={skill.name}
+                          src={skill.image}
+                          className="aspect-square object-contain object-center w-[74px] overflow-hidden"
+                        />
+                      </figure>
+                      
+                      <div className="text-slate-800 text-base leading-7 self-stretch whitespace-nowrap mt-2.5">
+                        {skill?.name}
+                      </div>
+                    </div>
+                  ))
+                }
+               </div>
               <div className="justify-between items-stretch self-stretch flex gap-4 mt-2 pr-8 max-md:pr-5">
                 <div className="text-indigo-600 text-center text-base font-semibold leading-7 grow whitespace-nowrap">
                   View tech stack
@@ -374,18 +319,16 @@ export default function CompanyProfile() {
           </div>
           <div className="flex overflow-x-auto gap-4 mt-3 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
             {
-              Array.from({ length: 5 }).map((each: any, index: number) => (
-                <div key={index} className="items-center rounded border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow basis-[0%] flex-col px-8 py-6 border-solid max-md:px-5">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/493944751478228c0f15d7cfaec7cc1fa1c4e75c5a2962e210538187aaf5884c?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
-                    className="aspect-square object-contain object-center w-20 overflow-hidden max-w-full"
-                  />
+              teamMembers && teamMembers.map((member: typeof teamMembers[0], index: number) => (
+                <div key={index} className="items-center rounded border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex grow flex-col px-8 py-6 border-solid max-md:px-5">
+                  <figure className="w-[70px] relative rounded-full overflow-hidden h-auto aspect-square">
+                    <Image alt={member.name} className="rounded-full object-cover object-center" src={member.image} />
+                  </figure>
                   <div className="text-slate-700 text-center text-lg font-semibold leading-7 self-stretch whitespace-nowrap mt-4">
-                    Célestin Gardinier
+                    {member?.name}
                   </div>
                   <div className="text-slate-500 text-sm text-center leading-7 self-stretch whitespace-nowrap mt-1">
-                    CEO & Co-Founder
+                    {member?.title}
                   </div>
                   <img
                     loading="lazy"

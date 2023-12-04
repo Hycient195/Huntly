@@ -6,7 +6,7 @@ interface IProps {
 
 export default function SocialLinks({ details }: IProps) {
   return (
-    <div className="flex flex-col gap-y-4 p-2 lg:p-3 xl:p-4 border border-slate-300">
+    <div className="flex flex-col mb-4  gap-y-4 p-2 lg:p-3 xl:p-4 border border-slate-300">
       <span className="flex flex-row items-center gap-x-2 justify-between">
         <h2 className="text-lg text-slate700 font-semibold">Social Links</h2>
         <button className="bg-transparent text-primary top-3 right-3">

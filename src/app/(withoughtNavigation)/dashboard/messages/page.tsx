@@ -1,18 +1,19 @@
 "use client";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 const MessagesPage = memo(() => {
+  const [ isMessageSelected, setIsMessageSelected ] = useState<boolean>(false)
   return (
-    <main className="grid grid-cols-[1fr_4fr]">
-      <section className="border-r border-r-slate-300 min-w-[250px] p-[clamp(10px,5%,25px)] grid grid-rows-[max-content_1fr] items-center gap-y-4">
+    <main className="grid lg:grid-cols-[1fr_4fr]">
+      <section className={`${isMessageSelected ? "hidden" : "grid"} border-r border-r-slate-300 min-w-[300px] p-4 lg:p-[clamp(10px,5%,25px)] lg:grid grid-rows-[max-content_1fr] items-center gap-y-4`}>
         <div className="w-full">
           <input type="search" placeholder="Search messages" className="outline border w-full border-slate-300 outline-none focus:outline-2 focus:outline-slate-300 rounded-sm text-slate-500 placeholder:text-slate-300 px-4 py-2" />
         </div>
-        <ul className="w-full overflow-auto h-[calc(100vh-10.5em)] scroll">
+        <ul className="w-full overflow-auto h-[calc(100vh-10em)] scroll">
           {
             Array.from({ length: 25}).map((_, index: number) => (
               <li key={index} className=" border-b  border-b-slate-200">
-                <button className="p-2 grid grid-cols-[max-content_1fr] flex-row gap-x-2 w-full rounded-md hover:bg-indigo-50 duration-300">
+                <button onClick={() => setIsMessageSelected(true)} className="px-1 py-2 lg:p-2 grid grid-cols-[max-content_1fr] flex-row gap-x-2 w-full rounded-md hover:bg-indigo-50 duration-300">
                   <figure className="bg-indigo-400 w-[45px] rounded-full aspect-square h-auto">
             
                   </figure>
@@ -28,10 +29,15 @@ const MessagesPage = memo(() => {
       </section>
 
       {/* Right Section */}
-      <section className="grid grid-rows-[max-content_1fr_max-content]">
-        <div className="border-b border-b-slate-300 px-[clamp(10px,5%,25px)] py-4 flex flex-row gap-x-2 justify-between">
+      <section className={`${isMessageSelected ? "grid" : "hidden"} lg:grid grid-rows-[max-content_1fr_max-content]`}>
+        <div className="border-b border-b-slate-300 px-2 lg:px-[clamp(10px,5%,25px)] py-2 lg:py-4 flex flex-row gap-x-2 justify-between">
           <div className="flex flex-row items-center gap-x-2">
-            <figure className="bg-indigo-400 w-[50px] rounded-full aspect-square h-auto">
+            <button onClick={() => setIsMessageSelected(false)} className="lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <figure className="bg-indigo-400 w-[60px] rounded-full aspect-square h-auto">
             
             </figure>
             <div className="flex flex-col w-full overflow-hidden text-ellipsis">
@@ -80,7 +86,7 @@ const MessagesPage = memo(() => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
               </svg>
             </button>
-            <input type="text" placeholder="Reply message" className="px-2 py-2 text-slate-500 placeholder:text-slate-300" />
+            <textarea placeholder="Reply message" rows={1} className="px-2 py-2 text-slate-500 outline-none placeholder:text-slate-300" />
             <button className="text-slate-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />

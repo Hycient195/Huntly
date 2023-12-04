@@ -6,10 +6,10 @@ export default function Explore() {
     <div className="flex flex-col items-stretch">
       <div className="items-center bg-white flex w-full flex-col justify-center">
         <div className="flex w-full flex-col items-stretch max-md:max-w-full">
-          <div className="text-gray-700 text-lg leading-7 opacity-50 max-md:max-w-full">
+          {/* <div className="text-gray-700 text-lg leading-7 opacity-50 max-md:max-w-full">
             Companies we helped grow
-          </div>
-          <div className="justify-between items-start flex gap-5 mt-8 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+          </div> */}
+          <div className="justify-between items-start flex gap-6 mt-8 max-md:max-w-full max-md:flex-wrap max-md:justify-center">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b99e9c8-ff41-485c-bdf0-ade9417e8181?apiKey=0ce679486ae447bd8ce08b2cc2263e2e&"
@@ -45,7 +45,7 @@ export default function Explore() {
               <span className="text-slate-800">Explore by </span>
               <span className="text-sky-400">category</span>
             </div>
-            <Link href="/find-jobs" className="justify-end items-stretch flex gap-4 mt-7 self-end">
+            <Link href="/find-jobs" className="justify-end items-stretch flex gap-4 self-end">
               <div className="text-indigo-600 text-center text-base font-semibold leading-7">
                 Show all jobs
               </div>
@@ -60,7 +60,7 @@ export default function Explore() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[clamp(0.8rem,1.8vw,2rem)]">
               {
                 exploreCategory.map((category: typeof exploreCategory[0], index: number) => (
-                  <div className="items-center group border rounded-lg hover:bg-primary duration-500 flex grow flex-col w-full p-8 border-solid max-md:mt-8 max-md:px-5">
+                  <div className="items-center group border rounded-lg hover:bg-primary duration-500 flex grow flex-col w-full p-8 border-solid">
                     <div className="text-primary group-hover:text-white w-[40%] h-auto aspect-square flex items-center justify-center"> {category.icon}</div>
                     <div className="text-slate-600 group-hover:text-white tracking-wide text-2xl font-semibold leading-7 self-stretch mt-8">
                       {category.title}

@@ -8,7 +8,7 @@ const DashboardJobs = memo(() => {
   const [ listArrangement, setListArrangement ] = useState<"grid"|"list">("list");
 
   return (
-    <main className="p-2 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-rows-[max-content_max-content_1fr]">
+    <main className="p-3 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-rows-[max-content_max-content_1fr]">
       <section className="">
         <form className="border border-slate-200  px-[2vw] py-[2vh] grid grid-cols-[1fr_1fr_max-content] gap-x-[5%]">
 
@@ -43,8 +43,8 @@ const DashboardJobs = memo(() => {
       <div className="h-[1px] liner my-[2vh] bg-slate-300 fullwidth" />
 
       {/* Jobs Section */}
-      <section className="grid gap-x-2 lg:gap-x-3 xl:gap-x-4 grid-cols-[1fr_5fr] max-h-[calc(100vh-12rem)] h-full">
-        <aside className="border-r border-r-slate-300  overflow-y-auto min-w-[200px]">
+      <section className="grid gap-x-2 lg:gap-x-3 xl:gap-x-4 lg:grid-cols-[1fr_5fr] max-h-[calc(100vh-12rem)] h-full">
+        <aside className="border-r hidden lg:block border-r-slate-300  overflow-y-auto min-w-[200px]">
           <details open className="appearance-none mb-5">
             <summary className="text-slate-500 text-center text-[0px] h-[15px] relative marker font-semibold items-center gap-x-2 justify-between marker:appearance-none mb-4 ">
               <h3 className=" text-[15px] block absolute">Type of Employment</h3>

@@ -29,7 +29,7 @@ const Header = memo(() => {
               </div>
             </Link>
            
-            <ul className="grid grid-flow-col gap-x-[1vw] max-w-max ml-[clamp(20px,2vw,60px)]">
+            <ul className="hidden md:grid grid-flow-col gap-x-[1vw] max-w-max ml-[clamp(20px,2vw,60px)]">
               <li className={`border-b-4 border-white duration-300 ${pathname.includes("/find-jobs") ? " border-b-primary text-primary" : "text-slate-500"}`}>
                 <button onClick={() => router.push("/find-jobs")} className="font-medium  px-1 py-4 capitalize">Find Jobs</button>
               </li>
@@ -48,15 +48,20 @@ const Header = memo(() => {
             </div> */}
           </div>
           <div className="justify-between items-center flex gap-5 pl-6 py-3.5 max-md:pl-5">
-            <Link href="/sign-in" className="text-indigo-600 text-center text-base font-bold leading-7 my-auto">
+            <Link href="/sign-in" className="hidden md:block text-indigo-600 text-center text-base font-bold leading-7 my-auto">
               Login
             </Link>
-            <div className="self-stretch flex justify-between gap-4 items-start">
+            <div className="self-stretch hidden md:flex justify-between gap-4 items-start">
               <div className="bg-zinc-200 w-px shrink-0 h-12" />
-              <Link href="/sign-up" className="text-white flex items-center text-center text-base font-bold leading-7 justify-center items-center bg-indigo-600 self-stretch grow px-6 py-2">
+              <Link href="/sign-up" className="text-white flex text-center text-base font-bold leading-7 justify-center items-center bg-indigo-600 self-stretch grow px-6 py-2">
                 Sign Up
               </Link>
             </div>
+            <button className="block md:hidden border text-primary border-primary/60 px-1.5 py-1 rounded-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
