@@ -1,17 +1,19 @@
 import Modal from "@sharedComponents/Modal";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { memo } from "react";
-import { NavList } from "./NavList";
-import { navRoutes, settings } from "../data";
+import { mobileNavModalRoutes } from "../data";
 
 interface IProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const MobileNavMenuModal: React.FC<IProps> = memo(({ isOpen, setIsOpen }) => {
+const MobileNavHomeMenuModal: React.FC<IProps> = memo(({ isOpen, setIsOpen }) => {
+  const pathname = usePathname();
 
+  const highlightActive = (arg: string): boolean => pathname.split(/\//).includes(arg.split(/\//)[0]);
   if (isOpen) {
     return (
         <aside className="bg-white z-[1] fixed md:hidden bottom-0 left-0 w-full h-full border border-r-slate-200">
@@ -24,14 +26,19 @@ const MobileNavMenuModal: React.FC<IProps> = memo(({ isOpen, setIsOpen }) => {
             <Image width={35} height={35} alt="Logo" src="/logo.svg" />
             <h1 className="text-2xl font-semibold -mb-2 text-slate-800">Huntly</h1>
           </Link>
-  
-          <NavList setIsOpen={setIsOpen} route={navRoutes} />
-  
-          <div className="h-[1px] bg-slate-300"></div>
-  
-          <p className="text-md mt-[3vh] px-6 font-semibold text-slate-500">Settings</p>
-          
-          <NavList setIsOpen={setIsOpen} route={settings} />
+
+          <ul className="flex flex-col p-2 gap-y-2.5 my-[2vh]">
+            {
+              mobileNavModalRoutes.map((item: typeof mobileNavModalRoutes[0], index: number) => (
+                <li key={index} className={`pl-2 pr-2 border-l-4 ${highlightActive(item.route) ? "border-l-indigo-500" : "border-l-white"}`}>
+                  <Link href={item.route} onClick={() => { setIsOpen && setIsOpen(false)}} className={`flex px-2 py-3 rounded-md flex-row gap-3 text-slate-500 hover:bg-indigo-50 hover:text-indigo-600 ${highlightActive(item.route) && "bg-indigo-50 text-indigo-600"}`}>
+                    {item.icon}
+                    <p className="text-md">{item.text}</p>
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
   
           <div className="flex flex-row gap-x-3 items-center p-4 self-end absolute bottom-3">
             <div className="bg-indigo-400 relative w-[52px] overflow-hidden rounded-full aspect-square h-auto">
@@ -47,4 +54,4 @@ const MobileNavMenuModal: React.FC<IProps> = memo(({ isOpen, setIsOpen }) => {
   }
 })
 
-export default MobileNavMenuModal;
+export default MobileNavHomeMenuModal;

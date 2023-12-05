@@ -17,7 +17,7 @@ const JobList: React.FC<IProps> = memo(({ arrangement, routePrefix }) => {
         {
           Array.from({ length: 20 }).map((_, index: number) => (
             <li key={index}>
-              <Link href={`${routePrefix}/${index}`} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border border-slate-300 hover:cursor-pointer hover:bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-3 lg:gap-x-3 xl:gap-x-4`}>
+              <Link href={`${routePrefix}/${index}`} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border border-slate-300 hover:cursor-pointer bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-3 lg:gap-x-3 xl:gap-x-4`}>
               <figure className="w-[50px] justify-self-center rounded-full aspect-square h-auto bg-primary/50">
 
               </figure>

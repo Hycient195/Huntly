@@ -34,7 +34,7 @@ export default function SignIn() {
             </figure>
           </div>
         </div>
-        <div className="flex flex-col items-stretch w-[90%] min-w-[300px] max-w-[500px] mx-auto">
+        <div className="flex relative flex-col items-stretch w-[90%] min-w-[300px] max-w-[500px] mx-auto">
           <form className="items-star flex w-full flex-col m-auto py-6">
             {/* <div className="justify-center items-stretch self-center flex gap-0">
               <div className="text-indigo-600 text-base font-semibold leading-7 whitespace-nowrap justify-center items-stretch bg-violet-100 grow px-3 py-2">
@@ -44,10 +44,25 @@ export default function SignIn() {
                 Company
               </div>
             </div> */}
-            <div className="self-stretch text-gray-600 text-center text-3xl font-semibold leading-10 mt-6">
+            <Link href="/" className="flex md:hidden absolute left-0 top-4 items-center gap-2">
+              <figure className="relative h-[30px] w-[30px]">
+                <Image
+                  alt="sign-up banner"
+                  fill
+                  loading="lazy"
+                  src="/logo.svg"
+                  className="object-cover object-center"
+                />
+              </figure>
+           
+              <div className="text-gray-700 text-2xl font-bold leading-9 tracking-tight grow whitespace-nowrap mt-1 self-start">
+                Huntly
+              </div>
+            </Link>
+            <div className="self-stretch text-gray-600 text-center text-xl md:text-2xl lg:text-3xl font-semibold leading-10 mt-6">
               Get more opportunities{" "}
             </div>
-            <div className="justify-center items-center self-stretch border border-[color:var(--brands-secondary,#CCCCF5)] flex w-full flex-col mt-6 px-16 py-3 border-solid max-md:px-5">
+            <div className="justify-center items-center self-stretch border border-[color:var(--brands-secondary,#CCCCF5)] flex w-full flex-col mt-2 md:mt-6 px-16 py-3 border-solid max-md:px-5">
               <button type="button" className="flex items-center gap-2.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                   <path d="M18.6711 8.36824H17.9998V8.33366H10.4998V11.667H15.2094C14.5223 13.6074 12.6761 15.0003 10.4998 15.0003C7.73859 15.0003 5.49984 12.7616 5.49984 10.0003C5.49984 7.23908 7.73859 5.00033 10.4998 5.00033C11.7744 5.00033 12.934 5.48116 13.8169 6.26658L16.174 3.90949C14.6857 2.52241 12.6948 1.66699 10.4998 1.66699C5.89775 1.66699 2.1665 5.39824 2.1665 10.0003C2.1665 14.6024 5.89775 18.3337 10.4998 18.3337C15.1019 18.3337 18.8332 14.6024 18.8332 10.0003C18.8332 9.44158 18.7757 8.89616 18.6711 8.36824Z" fill="#FFC107"/>

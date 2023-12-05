@@ -1,14 +1,16 @@
-"use client"
-;
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { memo } from "react";
+import { memo, useState } from "react";
+import MobileNavHomeMenuModal from "./MobileNavModal";
 
 const Header = memo(() => {
   const router = useRouter();
   const pathname = usePathname();
+
+  const [ isMobileNavOpen, setIsMobilenNavOpen ] = useState<boolean>(false);
 
   return (
     <div className="justify-center items-center flex w-full flex-col px-5 max-md:max-w-full">
@@ -57,13 +59,14 @@ const Header = memo(() => {
                 Sign Up
               </Link>
             </div>
-            <button className="block md:hidden border text-primary border-primary/60 px-1.5 py-1 rounded-sm">
+            <button onClick={() => setIsMobilenNavOpen(true)} className="block md:hidden border text-primary border-primary/60 px-3 py-1.5 rounded-sm">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
           </div>
         </div>
+        <MobileNavHomeMenuModal isOpen={isMobileNavOpen} setIsOpen={setIsMobilenNavOpen} />
       </div>
   )
 });

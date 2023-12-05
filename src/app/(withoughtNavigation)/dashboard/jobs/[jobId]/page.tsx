@@ -5,7 +5,7 @@ import BenefitCard from "../../../../../_SharedComponents/BenefitCard";
 
 const JobDetails = memo(() => {
   return (
-    <main className="p-2 md:p-3 lg:p-4 xl:p-6">
+    <main className="p-3 lg:p-4 xl:p-6">
       <section className="p-3 md:p-4 lg:p-6 xl:p-8 bg-indigo-50/80 rounded-md">
         <div className="border-slate-300 flex flex-row g-2 justify-between items-center p-2 md:p-3 lg:p-4 xl:p-6 bg-white">
           <div className="flex flex-row max-w-max items-center gap-2 lg:gap-3 xl:gap-5">
@@ -29,7 +29,7 @@ const JobDetails = memo(() => {
         </div>
       </section>
 
-      <section className="grid grid-cols-[4fr_1fr] mt-[3vh] gap-2 lg:gap-4 xl:gap-5">
+      <section className="grid grid-cols-1 md:grid-cols-[4fr_1fr] mt-[3vh] gap-2 lg:gap-4 xl:gap-5">
         <div className="max-w-screen-md">
           <div className="">
             <h2 className="text-lg text-slate700 font-semibold">Description</h2>

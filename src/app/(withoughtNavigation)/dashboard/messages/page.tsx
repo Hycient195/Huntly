@@ -5,11 +5,11 @@ const MessagesPage = memo(() => {
   const [ isMessageSelected, setIsMessageSelected ] = useState<boolean>(false)
   return (
     <main className="grid lg:grid-cols-[1fr_4fr]">
-      <section className={`${isMessageSelected ? "hidden" : "grid"} border-r border-r-slate-300 min-w-[300px] p-4 lg:p-[clamp(10px,5%,25px)] lg:grid grid-rows-[max-content_1fr] items-center gap-y-4`}>
+      <section className={`${isMessageSelected ? "hidden" : "grid"} border-r max-h-[calc(100vh-55px)] border-r-slate-300 min-w-[300px] p-3 lg:p-[clamp(10px,5%,25px)] lg:grid grid-rows-[max-content_1fr_max-content] items-center gap-y-3`}>
         <div className="w-full">
           <input type="search" placeholder="Search messages" className="outline border w-full border-slate-300 outline-none focus:outline-2 focus:outline-slate-300 rounded-sm text-slate-500 placeholder:text-slate-300 px-4 py-2" />
         </div>
-        <ul className="w-full overflow-auto h-[calc(100vh-10em)] scroll">
+        <ul className="w-full overflow-auto h-full  scroll">
           {
             Array.from({ length: 25}).map((_, index: number) => (
               <li key={index} className=" border-b  border-b-slate-200">
@@ -26,6 +26,7 @@ const MessagesPage = memo(() => {
             ))
           }
         </ul>
+        <div />
       </section>
 
       {/* Right Section */}

@@ -34,8 +34,8 @@ export default function SignUp() {
             </figure>
           </div>
         </div>
-        <div className="flex flex-col items-stretch w-[90%] min-w-[300px] max-w-[500px] mx-auto">
-          <form className="items-star flex w-full flex-col m-auto py-6">
+        <div className="flex flex-col relative items-stretch w-[90%] min-w-[300px] max-w-[500px] mx-auto">
+          <form className="items-star  flex w-full flex-col m-auto py-6">
             {/* <div className="justify-center items-stretch self-center flex gap-0">
               <div className="text-indigo-600 text-base font-semibold leading-7 whitespace-nowrap justify-center items-stretch bg-violet-100 grow px-3 py-2">
                 Job Seeker
@@ -44,7 +44,22 @@ export default function SignUp() {
                 Company
               </div>
             </div> */}
-            <div className="self-stretch text-gray-600 text-center text-3xl font-semibold leading-10 mt-6">
+            <Link href="/" className="flex md:hidden absolute left-0 top-4 items-center gap-2">
+              <figure className="relative h-[30px] w-[30px]">
+                <Image
+                  alt="sign-up banner"
+                  fill
+                  loading="lazy"
+                  src="/logo.svg"
+                  className="object-cover object-center"
+                />
+              </figure>
+           
+              <div className="text-gray-700 text-2xl font-bold leading-9 tracking-tight grow whitespace-nowrap mt-1 self-start">
+                Huntly
+              </div>
+            </Link>
+            <div className="self-stretch text-gray-600 text-center text-xl md:text-2xl lg:text-3xl font-semibold leading-10 mt-6">
               Get more opportunities{" "}
             </div>
             <div className="justify-center items-center self-stretch border border-[color:var(--brands-secondary,#CCCCF5)] flex w-full flex-col mt-6 px-16 py-3 border-solid max-md:px-5">

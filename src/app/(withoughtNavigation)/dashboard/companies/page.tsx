@@ -11,7 +11,7 @@ const DashboardJobs = memo(() => {
   return (
     <main className="p-3 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-rows-[max-content_max-content_1fr]">
       <section className="">
-        <form className="border border-slate-200  px-[2vw] py-[2vh] grid grid-cols-[1fr_1fr_max-content] gap-x-[5%]">
+        <form className="border border-slate-200  px-[2vw] py-2 md:py-4 xl:py-6 grid grid-cols-1 md:grid-cols-[1fr_1fr_max-content] gap-2 md:gap-4 lg:gap-6 xl:gap-8">
 
           <div className="relative">
             <span className="absolute left-2 top-0 bottom-0 w-full flex items-center text-slate-500">
@@ -29,14 +29,14 @@ const DashboardJobs = memo(() => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
             </span>
-            <select name="" id="" className="py-2 pr-4 pl-10 w-full border-b outline-none bg-white appearance-none text-slate-400 placeholder:text-slate-300 border-b-slate-300 rounded-none">
+            <select name="" id="" className="py-2  pr-4 pl-10 w-full border-b outline-none bg-white appearance-none text-slate-400 placeholder:text-slate-300 border-b-slate-300 rounded-none">
               <option value="">Florence Italy</option>
               <option value="">Venice Italy</option>
               <option value="">Rome Italy</option>
             </select>
           </div>
 
-          <button className="btn-primary">Search</button>
+          <button className="btn-primary py-2.5">Search</button>
         </form>
         <p className="text-slate-400 mt-2 text-sm">Popular : Twitter, Microsoft, Apple, Facebook</p>
       </section>
@@ -92,8 +92,8 @@ const DashboardJobs = memo(() => {
 
           <CompanyList routeProfix="/dashboard/jobs" arrangement={listArrangement} companies={companies} />
 
-          <div className="flex max-w-[calc(100vw-2rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-xl border-primary/50  divide-blue-400 mt-4 p-1.5">
-            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-lg rounded-bl-lg text-primary/90 px-6 py-1">PREV</button>
+          <div className="flex max-w-[calc(100vw-2rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-md border-primary/50  divide-blue-400 mt-4 p-1">
+            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-md rounded-bl-md text-primary/90 px-6 py-1">PREV</button>
             <div className=" text-ellipsis whitespace-nowrap overflow-hidden">
               {
                 Array.from({ length: 6}).map((_, index: number) => (
@@ -101,7 +101,7 @@ const DashboardJobs = memo(() => {
                 ))
               }
             </div>
-            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tr-lg rounded-br-lg text-primary/90 px-6 py-1">NEXT</button>
+            <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tr-md rounded-br-md text-primary/90 px-6 py-1">NEXT</button>
           </div>
         </div>
       </section>

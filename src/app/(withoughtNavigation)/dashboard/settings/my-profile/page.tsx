@@ -25,9 +25,9 @@ export default function MyProfile() {
               </div>
             </div>
             <div className="flex flex-col  ml-5 max-md:w-full max-md:ml-0">
-              <div className="grow max-md:max-w-full max-md:mt-10 max-md:pr-5">
-                <div className="gap-2 lg:gap-4 flex max-md:flex-col  max-md:gap-0">
-                  <figure className="w-[clamp(150px,10vw,180px)] outline outline-primary-pale object-center h-[clamp(150px,10vw,200px)] bg-red-400 object-cover overflow-hidden relative rounded-full aspect-square">
+              <div className="max-md:max-w-full justify-center flex max-md:mt-10">
+                <div className="gap-3 md:gap-5 lg:gap-7 justify-center mx-auto items-center flex max-md:flex-col  max-md:gap-0">
+                  <figure className="w-[clamp(150px,10vw,180px)] outline outline-primary-pale object-center h-[clamp(150px,10vw,200px)] object-cover overflow-hidden relative rounded-full aspect-square">
                     <Image
                       alt="user"
                       src="/mypic.jpg"
@@ -36,7 +36,7 @@ export default function MyProfile() {
                       className="aspect-square object-cover object-center w-full overflow-hidden shrink-0 max-w-full"
                     />
                   </figure>
-                  <div className="flex flex-col ml-5 max-md:w-full max-md:ml-0">
+                  <div className="flex flex-col items-center  max-md:w-full">
                     <div className="items-center max-w-[350px] border-[color:var(--brands-primary,#4640DE)] bg-slate-50 flex grow flex-col w-full px-4 py-6 rounded-lg border-2 border-dashed max-md:mt-8 max-md:px-5">
                       <img
                         loading="lazy"
@@ -94,21 +94,21 @@ export default function MyProfile() {
                   </div>
                 </div>
                 <div className="items-stretch flex justify-between gap-5 mt-6 max-md:max-w-full max-md:flex-wrap">
-                  <div className="items-stretch flex grow basis-[0%] flex-col">
-                    <div className="text-red-400 text-base font-semibold leading-7">
+                  <div className="items-stretch grid grow basis-[0%] flex-col">
+                    <div className="text-base font-semibold leading-7">
                       <span className="text-slate-600">Date of Birth </span>
                       <span className="text-red-400">*</span>
                     </div>
-                    <div className="justify-between items-stretch border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex gap-5 mt-1 px-4 py-3 border-solid">
-                      <input type="date" className="text-slate-600 text-base leading-7" />
+                    <div className="justify-between relative items-stretch border border-[color:var(--neutrals-20,#D6DDEB)] bg-white flex gap-5 mt-1 border-solid">
+                      <input type="date" className="text-slate-600 focus:outline outline-[3px] w-full focus:outline-slate-200 text-base leading-7 border border-[color:var(--neutrals-20,#D6DDEB)] bg-white justify-center px-4 py-3 border-solid items-start" />
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4b9cac8-9346-4c6f-b5a9-3dde73e87547?"
-                        className="aspect-square object-contain object-center w-5 overflow-hidden self-center shrink-0 max-w-full my-auto"
+                        className="aspect-square absolute right-2 object-contain object-center w-5 overflow-hidden self-center shrink-0 max-w-full my-auto"
                       />
                     </div>
                   </div>
-                  <div className="items-stretch flex grow basis-[0%] flex-col">
+                  <div className="items-stretch grid grow basis-[0%] flex-col">
                     <div className="text-red-400 text-base font-semibold leading-7">
                       <span className="text-slate-600">Gender </span>
                       <span className="text-red-400">*</span>

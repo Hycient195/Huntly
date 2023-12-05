@@ -1,7 +1,7 @@
 export default function MyComponent() {
   return (
-    <main className="p-2 md:p-3 lg:p-4 xl:p-6">
-      <div className="gap-0 grid-cols-1 grid lg:grid-cols-[1fr_3fr]  fixed py-4 lg:py-6 xl:py-8 gap-x-[clamp(10px,1.5vw,40px)]">
+    <main className="p-2 md:p-3 lg:p-4 xl:p-6 flex overflow-hidden justify-center">
+      <div className="gap-0 grid-cols-1 grid lg:grid-cols-[1fr_3fr]  py-4 lg:py-6 xl:py-8 gap-x-[clamp(10px,1.5vw,40px)]">
         
         {/* Left Aside Section */}
         <aside className="hidden  lg:flex relative flex-col items-stretch max-md:w-full min-w-[230px] max-w-[300px] max-h-[calc(100vh-130px)]">
@@ -56,7 +56,7 @@ export default function MyComponent() {
         </aside>
 
         {/* Main section */}
-        <div className="items-start overflow-scroll h-[calc(100vh-100px)] flex grow flex-col px-3 lg:px-5 xl:px-6">
+        <div className="items-start overflow-scroll  overscroll-auto h-[calc(100vh-100px)] flex flex-col px-3 pb-5 lg:px-5 xl:px-6">
           <div className="items-stretch sticky py-2 w-full top-0 bg-white flex gap-3 self-start">
             <div className="text-slate-500 text-right text-base leading-7">
               Sort by:

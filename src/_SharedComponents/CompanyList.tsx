@@ -17,11 +17,11 @@ const CompanyList = memo(({ arrangement, companies, routeProfix, scroll = true }
   const router = useRouter();
   console.log(arrangement)
   return (
-    <div className={`${scroll && "overflow-y-auto max-h-[calc(100vh-15rem)]"} mt-2  mb-10`}>
+    <div className={`${scroll && "overflow-y-auto max-h-[calc(100vh-15rem)]"} mt-2  mb-4 md:bg-6 lg:mb-10`}>
       <ul className={`grid ${arrangement === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4": "grid-flow-row"} flex-col gap-2 ${scroll && "overflow-y-auto"}`}>
         {
           companies && companies.map((company: typeof companies[0], index: number) => (
-            <li key={index} onClick={() => router.push(`${routeProfix}/${index}`)} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border relative border-slate-300 hover:cursor-pointer hover:bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-4 lg:gap-x-3 xl:gap-x-4`}>
+            <li key={index} onClick={() => router.push(`${routeProfix}/${index}`)} className={`${arrangement === "grid" ? "grid-flow-row" : "grid-cols-[0.5fr_5fr_1.5fr]"} border relative border-slate-300 hover:cursor-pointer bg-primary-pale/80 duration-300 p-4 lg:p-6 xl:p-4 grid gap-x-2 gap-y-4 lg:gap-x-3 xl:gap-x-4`}>
               <span className="px-2 py-0.5 text-xs bg-primary-pale text-primary absolute top-2 right-2">7 Jobs</span>
               <figure className="w-[50px] relative object-cover justify-self-cente rounded-full aspect-square h-auto bg-primary/50">
                 <Image fill alt={company.name} src={company.image} />
