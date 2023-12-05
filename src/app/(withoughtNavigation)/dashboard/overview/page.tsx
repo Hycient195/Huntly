@@ -79,14 +79,13 @@ function OverviewPage() {
       </section>
 
       {/* Recent Application History Section */}
-      <section className="border b-6 max-h-[calc((100vh-110px)-33vh)] grid grid-rows-[max-content_max-content_1fr_max-content_max-content] rounded h-full">
-        <h3 className="text-slate-600 text-xl p-3 font-semibold">Recent Applications History</h3>
-        <div className="h-px w-full bg-slate-300" />
+      <section className="border b-6 max-h-[calc((100vh-110px)-33vh)] grid grid-rows-[max-content_1fr_max-content_max-content] rounded h-full">
+        <h3 className="text-slate-700 shadow-md z-[3] text-xl p-3 px-4 border-b font-semibold">Recent Applications History</h3>
 
         <div className="w-full overflow-y-auto">
           <table cellPadding={10} className="table w-full " >
             {
-            openJobs.map((job: typeof openJobs[0], index: number) => (
+              openJobs.map((job: typeof openJobs[0], index: number) => (
                 <tr key={index} className="table-row odd:bg-primary-pale align-middle items-center">
                   <td className="relative flex"><Image src={job.image} alt={job.title} /></td>
                   <td className="table-cell gap-1.5">
