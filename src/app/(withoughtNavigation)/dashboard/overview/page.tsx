@@ -4,11 +4,11 @@ import { memo } from "react";
 
 const OverviewPage = memo(() => {
   return (
-    <main className="p-3 md:p-4 xl:p-6  grid grid-rows-[1fr_4fr_7fr] gap-4 h-[calc(100vh-100px)] max-h-[calc(100vh-100px)] lg:gap-5">
+    <main className="p-3 md:p-4 xl:p-6  grid grid- md:grid-rows-[1fr_4fr_7fr] gap-6 md:gap-4 h-[calc(100vh-100px)] max-h-[calc(100vh-100px)] lg:gap-5">
       <section className="flex flex-row items-start gap-2 justify-between">
         <div className="header">
           <h1 className="header-title text-2xl font-bold text-slate-700">Good morning, Jake</h1>
-          <p className="header-subtitle text-slate-500">
+          <p className="header-subtitle leading-5 text-slate-500">
             Here is what&apos;s happening with your job search applications from July
             19 - July 25.
           </p>
@@ -21,23 +21,23 @@ const OverviewPage = memo(() => {
         </button>
       </section>
 
-      <section className="grid grid-cols-[1fr_1.3fr] lg:grid-cols-[1fr_1.3fr_1.6fr] gap-2 md:gap-3 xl:gap-4">
-        <div className="grid grid-rows-2 gap-2 md:gap-3 lg:gap-4 h-full">
-          <div className="border shadow rounded p-2 md:p-3 lg:p-4 flex flex-col gap-4">
+      <section className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr]  lg:grid-cols-[1fr_1.3fr_1.6fr] gap-2 md:gap-3 xl:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-2  md:gap-3 lg:gap-4 h-full">
+          <div className="border shadow rounded p-3 lg:p-4 flex flex-col gap-4">
             <h3 className="text-slate-600 font-semibold">Total Jobs Applied</h3>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">45</h1>
           </div>
-          <div className="border shadow rounded p-2 md:p-3 lg:p-4 flex flex-col gap-4">
+          <div className="border shadow rounded p-3 lg:p-4 flex flex-col gap-4">
             <h3 className="text-slate-600 font-semibold">Interviewed</h3>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">18</h1>
           </div>
         </div>
 
-        <div className="border shadow grid grid-rows-[max-content_1fr_max-content] rounded p-2 md:p-3 lg:p-4 gap-3">
+        <div className="border shadow min-h-[250px] md:min-h-0 grid grid-rows-[max-content_1fr_max-content] rounded p-3 lg:p-4 gap-3">
           <h3 className="text-slate-600 font-semibold">Total Jobs Applied</h3>
-          <div className="flex flex-row flex-wrap justify-self-center items-center gap-2 max-h-max min-w-max ">
+          <div className="grid grid-flow-col justify-self-center items-center gap-2 max-h-max min-w-max ">
             <div
-              className="h-[100%] flex items-center justify-center relative w-auto aspect-square rounded-full" id="my-pie-chart"
+              className="h-[100%] flex items-center justify-center w-auto aspect-square rounded-full" id="my-pie-chart"
               style={{ background: "conic-gradient(#6366f1 0.55% 40.08%, #eef2ff 40.08% 100.68%)"}}
               >
                 <div className="h-[80%] w-[80%] bg-white rounded-full" />
@@ -61,9 +61,9 @@ const OverviewPage = memo(() => {
           </button>
         </div>
 
-        <div className="border col-span-2 shadow lg:col-span-1 rounded flex flex-col">
-          <h3 className="text-slate-600 text-md py-2 px-2 md:px-3 font-semibold">Recent Applications History</h3>
-          <h3 className="text-slate-600 shadow-md border-y boder-y-slate-300 text-md py-2 px-2 md:px-3 font-semibold">Today, <span className="font-light">21st December</span></h3>
+        <div className="border col-span-1 md:col-span-2 shadow lg:col-span-1 rounded flex flex-col">
+          <h3 className="text-slate-600 text-md py-2 px-3 font-semibold">Recent Applications History</h3>
+          <h3 className="text-slate-600 shadow-md border-y boder-y-slate-300 text-md py-2 px-3 font-semibold">Today, <span className="font-light">21st December</span></h3>
           <div className="py-2 max-h-[150px] overflow-scroll px-3 md:px-4">
             <ul className="">
               {

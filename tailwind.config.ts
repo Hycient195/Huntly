@@ -17,7 +17,8 @@ const config: Config = {
       },
       colors: {
         primary: colors.indigo[500],
-        "primary-pale": colors.indigo[50]
+        "primary-pale": colors.indigo[50],
+        test: "red"
       }
     },
   },
