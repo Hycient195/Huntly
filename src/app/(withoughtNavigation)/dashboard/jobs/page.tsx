@@ -105,7 +105,7 @@ function DashboardJobs() {
 
           <JobList routePrefix="/dashboard/jobs" arrangement={listArrangement} />
           
-          <div className="flex max-w-[calc(100vw-1.5rem)] bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-md border-primary/50  divide-blue-400 mt-4 p-1">
+          <div className="flex max-w-[calc(100vw-1.5rem)] w-max bottom-4 bg-white mb-4 mx-auto divide-x divide-dashed border md:max-w-max rounded-md border-primary/50  divide-blue-400 mt-4 p-1">
             <button className="bg-primary-pale/30 hover:bg-primary-pale rounded-tl-md rounded-bl-md text-primary/90 px-6 py-1">PREV</button>
             <div className=" text-ellipsis whitespace-nowrap overflow-hidden">
               {

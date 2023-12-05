@@ -50,13 +50,13 @@ const Header = memo(() => {
             </div> */}
           </div>
           <div className="justify-between items-center flex gap-5 pl-6 py-3.5 max-md:pl-5">
-            <Link href="/sign-in" className="hidden md:block text-indigo-600 text-center text-base font-bold leading-7 my-auto">
-              Login
+            <Link href="/sign-up" className="hidden md:block text-indigo-600 text-center text-base font-bold leading-7 my-auto">
+              Sign Up
             </Link>
             <div className="self-stretch hidden md:flex justify-between gap-4 items-start">
               <div className="bg-zinc-200 w-px shrink-0 h-12" />
-              <Link href="/sign-up" className="text-white flex text-center text-base font-bold leading-7 justify-center items-center bg-indigo-600 self-stretch grow px-6 py-2">
-                Sign Up
+              <Link href="/dashboard/overview" className="text-white flex text-center text-base font-bold leading-7 justify-center items-center bg-indigo-600 self-stretch grow px-6 py-2">
+                Dashboard
               </Link>
             </div>
             <button onClick={() => setIsMobilenNavOpen(true)} className="block md:hidden border text-primary border-primary/60 px-3 py-1.5 rounded-sm">
