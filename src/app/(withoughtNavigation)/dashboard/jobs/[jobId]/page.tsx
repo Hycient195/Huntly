@@ -3,7 +3,7 @@ import Image from "next/image";
 import { aboutImages, benefits, niceToHaves, requiredSkills, responsibilities, whoAreYou } from "../../../../../_SharedData/perksAndBenefits";
 import BenefitCard from "../../../../../_SharedComponents/BenefitCard";
 
-const JobDetails = memo(() => {
+function JobDetails() {
   return (
     <main className="p-3 lg:p-4 xl:p-6">
       <section className="p-3 md:p-4 lg:p-6 xl:p-8 bg-indigo-50/80 rounded-md">
@@ -143,7 +143,7 @@ const JobDetails = memo(() => {
         <ul className="flex flex-row flex-wrap gap-3 gap-y-6 lg:gap-y-4 lg:gap-5 xl:gap-7 justify-center md:justify-start mt-[3vh]">
           {
             benefits && benefits.map((benefit: typeof benefits[0], index: number) => (
-              <BenefitCard image={benefit.image} title={benefit.title} text={benefit.text} />
+              <BenefitCard key={index} image={benefit.image} title={benefit.title} text={benefit.text} />
             ))
           }
         </ul>
@@ -180,6 +180,6 @@ const JobDetails = memo(() => {
       </section>
     </main>
   )
-});
+};
 
 export default JobDetails;

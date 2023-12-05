@@ -1,11 +1,11 @@
 "use client"
 
 import { memo, useState } from "react";
-import FilterSelector, { industryFilter, companySizeFilter, } from "./_components/FilterSelector";
 import CompanyList from "../../../../_SharedComponents/CompanyList";
 import { companies } from "./data";
+import FilterSelector, { industryFilter, companySizeFilter } from "@sharedComponents/FiltterSelector";
 
-const DashboardJobs = memo(() => {
+function DashboardJobs() {
   const [ listArrangement, setListArrangement ] = useState<"grid"|"list">("grid");
 
   return (
@@ -108,6 +108,6 @@ const DashboardJobs = memo(() => {
       {/* <div className="h-[1px]" /> */}
     </main>
   )
-})
+}
 
 export default DashboardJobs

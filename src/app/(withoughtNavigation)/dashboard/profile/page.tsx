@@ -8,7 +8,7 @@ import UserProfilePortfolio from "./_components/Portfolio";
 import AdditionalDetails from "./_components/AdditionalDetails";
 import SocialLinks from "./_components/SocialLinks";
 
-const DashboardUserProfile = memo(() => {
+function DashboardUserProfile() {
   return (
     <main className="p-2 md:p-3 lg:p-4 xl:p-6 h-screen grid grid-cols-1 lg:grid-cols-[4fr_1.4fr] gap-2 lg:gap-4 xl:gap-7">
 
@@ -82,6 +82,6 @@ const DashboardUserProfile = memo(() => {
       </aside>
     </main>
   )
-})
+};
 
 export default DashboardUserProfile;

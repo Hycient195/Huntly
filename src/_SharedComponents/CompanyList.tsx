@@ -10,12 +10,11 @@ interface IProps {
   companies: typeof companies
   routeProfix: string
   scroll?: boolean
-  
 }
 
 const CompanyList = memo(({ arrangement, companies, routeProfix, scroll = true }: IProps) => {
   const router = useRouter();
-  console.log(arrangement)
+
   return (
     <div className={`${scroll && "overflow-y-auto max-h-[calc(100vh-15rem)]"} mt-2  mb-4 md:bg-6 lg:mb-10`}>
       <ul className={`grid ${arrangement === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4": "grid-flow-row"} flex-col gap-2 ${scroll && "overflow-y-auto"}`}>
@@ -47,4 +46,5 @@ const CompanyList = memo(({ arrangement, companies, routeProfix, scroll = true }
   )
 });
 
+CompanyList.displayName = "CompanyList";
 export default CompanyList;

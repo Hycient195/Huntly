@@ -52,4 +52,5 @@ const JobList: React.FC<IProps> = memo(({ arrangement, routePrefix }) => {
   )
 })
 
+JobList.displayName = "JobList";
 export default JobList;

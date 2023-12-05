@@ -43,7 +43,7 @@ export default function MyComponent() {
                 className="absolute h-full w-full object-cover object-center inset-0"
               />
               <div className="relative text-white text-xl font-semibold leading-6">
-                Didn't find what you were looking for?
+                Didn&apos;t find what you were looking for?
               </div>{" "}
               <div className="relative text-slate-50 text-base leading-7 mt-3.5">
                 Contact our customer service{" "}
@@ -158,10 +158,10 @@ export default function MyComponent() {
             </span>
             <div className="text-slate-500 text-base leading-7 mt-4 max-md:max-w-full">
               Please note that we are unable to track materials submitted for
-              jobs you apply to via an employer's site. As a result, these
+              jobs you apply to via an employer&apos;s site. As a result, these
               applications are not recorded in the My Applications section of
               your JobHuntly account. We suggest keeping a personal record of
-              all positions you have applied to externally.{" "}
+              all positions you have applied to externally.
             </div>
           </div>
         </div>

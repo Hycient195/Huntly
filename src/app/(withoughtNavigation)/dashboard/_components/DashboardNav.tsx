@@ -29,4 +29,5 @@ const DashboardNav = memo(() => {
   )
 })
 
+DashboardNav.displayName = "DashboardNav";
 export default DashboardNav;

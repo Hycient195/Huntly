@@ -80,4 +80,5 @@ const UserProfileEducation = memo(({ experiences } : { experiences: Array<typeof
   )
 })
 
+UserProfileEducation.displayName = "UserProfileEducation";
 export default UserProfileEducation;

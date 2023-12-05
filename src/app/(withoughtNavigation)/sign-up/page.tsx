@@ -109,7 +109,7 @@ export default function SignIn() {
             </div>
             <div className="self-stretch text-indigo-600 text-sm leading-6 mt-6">
               <span className="text-slate-500">
-                By clicking 'Continue', you acknowledge that you have read and
+                By clicking &apos;Continue&apos;, you acknowledge that you have read and
                 accept the
               </span>
               <span className="text-indigo-600">Terms of Service</span>

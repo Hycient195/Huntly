@@ -21,6 +21,7 @@ const FilterSelector: React.FC<IProps> = memo(({ filters }) => {
   )
 })
 
+FilterSelector.displayName = "FilterSelector";
 export default FilterSelector;
 
 export const employmentFilter = [

@@ -40,13 +40,13 @@ export default function Explore() {
       </div>
       <div className="justify-end items-center bg-white flex w-full flex-col pt-12  max-md:max-w-full">
         <div className="flex w-full max-w-[1192px] flex-col items-stretch mt-6 max-md:max-w-full">
-          <div className="justify-between items-stretch flex w-full gap-5 max-md:max-w-full max-md:flex-wrap">
+          <div className="justify-between items-stretch flex w-full gap-x-5 max-md:max-w-full max-md:flex-wrap">
             <div className="text-sky-400 text-5xl font-semibold leading-[53px] grow shrink basis-auto max-md:max-w-full max-md:text-4xl max-md:leading-[49px]">
               <span className="text-slate-800">Explore by </span>
               <span className="text-sky-400">category</span>
             </div>
-            <Link href="/find-jobs" className="justify-end items-stretch flex gap-4 self-end">
-              <div className="text-indigo-600 text-center text-base font-semibold leading-7">
+            <Link href="/find-jobs" className="justify-end items-stretch flex gap-2 self-end">
+              <div className="text-indigo-600 text-center text-base font-semibold">
                 Show all jobs
               </div>
               <img
@@ -57,19 +57,19 @@ export default function Explore() {
             </Link>
           </div>
           <div className="mt-12 max-md:max-w-full max-md:mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[clamp(0.8rem,1.8vw,2rem)]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[clamp(0.8rem,1.8vw,2rem)]">
               {
                 exploreCategory.map((category: typeof exploreCategory[0], index: number) => (
-                  <div className="items-center group border rounded-lg hover:bg-primary duration-500 flex grow flex-col w-full p-8 border-solid">
+                  <div key={index} className="items-center group border rounded hover:bg-primary duration-500 flex grow flex-col w-full p-3 md:p4 lg:p-6 xl:p-8 border-solid">
                     <div className="text-primary group-hover:text-white w-[40%] h-auto aspect-square flex items-center justify-center"> {category.icon}</div>
-                    <div className="text-slate-600 group-hover:text-white tracking-wide text-2xl font-semibold leading-7 self-stretch mt-8">
+                    <div className="text-slate-600 text-center md:text-left group-hover:text-white tracking-wide text-xl lg:text-2xl font-semibold leading-7 self-stretch mt-8">
                       {category.title}
                     </div>
-                    <div className="items-stretch self-stretch flex justify-between gap-4 mt-1 px-px">
-                      <div className="text-slate-400 group-hover:text-white text-md leading-7">
+                    <div className="items-stretch flex-wrap w-full flex justify-center md:justify-between gap-4 px-px">
+                      <div className="text-slate-400 text-center md:text-left group-hover:text-white text-sm lg:text-md">
                         {category.details}
                       </div>
-                      <div className="group-hover:text-white">
+                      <div className="group-hover:text-white hidden md:block">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                         </svg>

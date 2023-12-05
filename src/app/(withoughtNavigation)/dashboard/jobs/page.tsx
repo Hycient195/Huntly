@@ -4,7 +4,7 @@ import { memo, useState } from "react";
 import FilterSelector, { categoriesFilter, employmentFilter, jobLevel, salaryRange } from "../../../../_SharedComponents/FiltterSelector";
 import JobList from "../../../../_SharedComponents/JobList";
 
-const DashboardJobs = memo(() => {
+function DashboardJobs() {
   const [ listArrangement, setListArrangement ] = useState<"grid"|"list">("list");
 
   return (
@@ -122,6 +122,6 @@ const DashboardJobs = memo(() => {
       {/* <div className="h-[1px]" /> */}
     </main>
   )
-})
+}
 
 export default DashboardJobs

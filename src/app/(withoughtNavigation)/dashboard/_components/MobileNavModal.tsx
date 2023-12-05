@@ -47,4 +47,5 @@ const MobileNavMenuModal: React.FC<IProps> = memo(({ isOpen, setIsOpen }) => {
   }
 })
 
+MobileNavMenuModal.displayName = "MobileNavMenuModal";
 export default MobileNavMenuModal;

@@ -1,17 +1,17 @@
 import { memo } from "react";
 import Image from "next/image";
 import { aboutImages, benefits, niceToHaves, requiredSkills, responsibilities, whoAreYou } from "./data";
-import BenefitCard from "./_components/BenefitCard";
 import Link from "next/link";
 import LatestJobCard from "@sharedComponents/LatestJobsCard";
 import { openJobs } from "@sharedData/openJobs";
 import ApplicationModal from "./_components/ApplicationModal";
+import BenefitCard from "@sharedComponents/BenefitCard";
 
 interface IProps {
   searchParams: { [key: string]: string | string[] | undefined}
 }
 
-const JobDetails: React.FC<IProps> = memo(({ searchParams }) => {
+function JobDetails({ searchParams }: IProps) {
   let isApplicationModalOpen: boolean = false;
   if (searchParams?.modalOpen) isApplicationModalOpen = JSON.parse(searchParams?.modalOpen as string) as boolean;
   console.log(isApplicationModalOpen);
@@ -219,6 +219,6 @@ const JobDetails: React.FC<IProps> = memo(({ searchParams }) => {
       <ApplicationModal isOpen={isApplicationModalOpen} />
     </main>
   )
-});
+};
 
 export default JobDetails;

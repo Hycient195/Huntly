@@ -8,7 +8,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     router.push("messages");
-  }, []);
+  }, [ router ]);
   
   return (
     <main className="">

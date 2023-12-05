@@ -349,7 +349,7 @@ export default function CompanyProfile() {
         <ul className="flex flex-row flex-wrap gap-3 gap-y-6 lg:gap-y-4 lg:gap-5 xl:gap-7 justify-center md:justify-start mt-[3vh]">
           {
             benefits && benefits.map((benefit: typeof benefits[0], index: number) => (
-              <BenefitCard image={benefit.image} title={benefit.title} text={benefit.text} />
+              <BenefitCard key={index} image={benefit.image} title={benefit.title} text={benefit.text} />
             ))
           }
         </ul>

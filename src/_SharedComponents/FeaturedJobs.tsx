@@ -27,8 +27,6 @@ export default function FeaturedJobs() {
         </div>
        
         <div className="overflow-y-auto mt-2 max-h-[calc(100vh-15rem)]">
-      
-      
     </div>
       </div>
     </div>

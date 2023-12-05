@@ -1,10 +1,9 @@
 import { openJobs } from "@sharedData/openJobs";
 import Image from "next/image";
-import { memo } from "react";
 
-const OverviewPage = memo(() => {
+function OverviewPage() {
   return (
-    <main className="p-3 md:p-4 xl:p-6  grid grid- md:grid-rows-[1fr_4fr_7fr] gap-6 md:gap-4 h-[calc(100vh-100px)] max-h-[calc(100vh-100px)] lg:gap-5">
+    <main className="p-3 b-6 md:p-4 xl:p-6  grid grid- md:grid-rows-[1fr_4fr_7fr] gap-6 md:gap-4 h-[calc(100vh-100px)] max-h-[calc(100vh-100px)] lg:gap-5">
       <section className="flex flex-row items-start gap-4 justify-between">
         <div className="header">
           <h1 className="header-title text-2xl font-bold text-slate-700">Good morning, Jake</h1>
@@ -80,7 +79,7 @@ const OverviewPage = memo(() => {
       </section>
 
       {/* Recent Application History Section */}
-      <section className="border max-h-[calc((100vh-110px)-33vh)] grid grid-rows-[max-content_max-content_1fr_max-content_max-content] rounded h-full">
+      <section className="border b-6 max-h-[calc((100vh-110px)-33vh)] grid grid-rows-[max-content_max-content_1fr_max-content_max-content] rounded h-full">
         <h3 className="text-slate-600 text-xl p-3 font-semibold">Recent Applications History</h3>
         <div className="h-px w-full bg-slate-300" />
 
@@ -92,14 +91,14 @@ const OverviewPage = memo(() => {
                   <td className="relative flex"><Image src={job.image} alt={job.title} /></td>
                   <td className="table-cell gap-1.5">
                     <span className="font-semibold text-slate-700">{job.title}</span><br />
-                    <span className="text-slate-400">{job?.companyName} {job.location?.city} {job.location.country} {job.jobType} </span>
+                    <span className="text-slate-400 text-sm">{job?.companyName} {job.location?.city} {job.location.country} {job.jobType} </span>
                   </td>
                   <td className="table-cell gap-1.5">
                     <span className="text-slate-600 font-semibold">Date Applied</span><br />
-                    <span className="text-slate-400 ordinal">23rd July 2021</span>
+                    <span className="text-slate-400 text-sm">23rd July 2021</span>
                   </td>
                   <td className="table-cellflex-col">
-                    <button className="px-3 py-1 rounded-full text-xs  text-yellow-500 border border-yellow-500">Marketing</button>
+                    <button className="px-3 py-1 rounded-full text-xs  text-yellow-500 border border-yellow-500">{job.jobIndustry}</button>
                   </td>
                 </tr>
               ))
@@ -118,6 +117,6 @@ const OverviewPage = memo(() => {
       </section>
     </main>
   )
-})
+};
 
 export default OverviewPage

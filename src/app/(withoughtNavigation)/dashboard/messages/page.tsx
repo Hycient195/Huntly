@@ -1,8 +1,9 @@
 "use client";
-import { memo, useState } from "react";
+import { useState } from "react";
 
-const MessagesPage = memo(() => {
-  const [ isMessageSelected, setIsMessageSelected ] = useState<boolean>(false)
+function MessagesPage() {
+  const [ isMessageSelected, setIsMessageSelected ] = useState<boolean>(false);
+
   return (
     <main className="grid lg:grid-cols-[1fr_4fr]">
       <section className={`${isMessageSelected ? "hidden" : "grid"} border-r max-h-[calc(100vh-55px)] border-r-slate-300 min-w-[300px] p-3 lg:p-[clamp(10px,5%,25px)] lg:grid grid-rows-[max-content_1fr_max-content] items-center gap-y-3`}>
@@ -103,6 +104,6 @@ const MessagesPage = memo(() => {
       </section>
     </main>
   )
-});
+};
 
 export default MessagesPage
